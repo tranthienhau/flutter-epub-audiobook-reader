@@ -1,0 +1,373 @@
+{
+ "version": "2026-11-09T06:00:00+11:00",
+ "titles": [
+  {
+   "id": "salt-road",
+   "title": "The Salt Road",
+   "author": "Eleanor Marsh",
+   "cover": "cover-salt-road",
+   "formats": [
+    "ebook",
+    "audiobook"
+   ],
+   "epub": "salt-road.epub",
+   "pages": 312,
+   "audioMinutes": 580,
+   "narrator": "Tom Ashby",
+   "narratorPhoto": "portrait-tom-ashby",
+   "premium": false,
+   "rating": 4.7,
+   "ratings": 1284,
+   "genres": [
+    "Historical fiction",
+    "Australia"
+   ],
+   "blurb": "1890s Victoria. Seventeen-year-old Meg Calloway rides the wing of her father's last cattle drove along the coast road from Port Fairy, with six hundred head, a failing loan and a winter that will not let up.",
+   "audio": "salt-road-ch07.m4a",
+   "chapters": [
+    {
+     "n": 1,
+     "title": "Port Fairy",
+     "seconds": 3980
+    },
+    {
+     "n": 2,
+     "title": "The Drover's Daughter",
+     "seconds": 4410
+    },
+    {
+     "n": 3,
+     "title": "The Coach Road",
+     "seconds": 4120
+    },
+    {
+     "n": 4,
+     "title": "Warrnambool Fair",
+     "seconds": 3305
+    },
+    {
+     "n": 5,
+     "title": "Salt and Iron",
+     "seconds": 4560
+    },
+    {
+     "n": 6,
+     "title": "The Bitter Tide",
+     "seconds": 3990
+    },
+    {
+     "n": 7,
+     "title": "The Long Paddock",
+     "seconds": 5175
+    },
+    {
+     "n": 8,
+     "title": "Home Paddock",
+     "seconds": 3260
+    }
+   ]
+  },
+  {
+   "id": "harbour-lights",
+   "title": "Harbour Lights",
+   "author": "Jonah Reid",
+   "cover": "cover-harbour-lights",
+   "formats": [
+    "audiobook"
+   ],
+   "audio": "harbour-lights-ch12.m4a",
+   "audioMinutes": 545,
+   "narrator": "Priya Nair",
+   "premium": false,
+   "rating": 4.6,
+   "ratings": 932,
+   "genres": [
+    "Contemporary",
+    "Sydney"
+   ],
+   "blurb": "A florist, a ferry and a family debt. Nell has one summer on Sydney Harbour to decide what she owes, and to whom.",
+   "chapters": [
+    {
+     "n": 10,
+     "title": "The Ferry Wharf",
+     "seconds": 2292
+    },
+    {
+     "n": 11,
+     "title": "Rain on Circular Quay",
+     "seconds": 2465
+    },
+    {
+     "n": 12,
+     "title": "Low Tide",
+     "seconds": 2490
+    },
+    {
+     "n": 13,
+     "title": "The Night Market",
+     "seconds": 2208
+    },
+    {
+     "n": 14,
+     "title": "Lighthouse Keeper",
+     "seconds": 2650
+    }
+   ]
+  },
+  {
+   "id": "red-dirt-country",
+   "title": "Red Dirt Country",
+   "author": "Sam Okafor",
+   "cover": "cover-red-dirt-country",
+   "formats": [
+    "ebook"
+   ],
+   "epub": "red-dirt-country.epub",
+   "pages": 340,
+   "premium": false,
+   "rating": 4.8,
+   "ratings": 611,
+   "genres": [
+    "Outback",
+    "Literary fiction"
+   ],
+   "blurb": "A Lagos-born vet takes a twelve-month contract on a Northern Territory cattle station and learns what the wet season does to plans."
+  },
+  {
+   "id": "notes-from-hobart",
+   "title": "Notes from Hobart",
+   "author": "Ruth Lim",
+   "cover": "cover-notes-from-hobart",
+   "formats": [
+    "ebook",
+    "audiobook"
+   ],
+   "epub": "notes-from-hobart.epub",
+   "pages": 188,
+   "audioMinutes": 302,
+   "premium": false,
+   "rating": 4.5,
+   "ratings": 402,
+   "genres": [
+    "Essays",
+    "Tasmania"
+   ],
+   "blurb": "Short essays from a year of Saturday markets, ferry crossings and kunanyi weather."
+  },
+  {
+   "id": "quiet-coast",
+   "title": "The Quiet Coast",
+   "author": "Ava Bennett",
+   "cover": "cover-quiet-coast",
+   "formats": [
+    "ebook",
+    "audiobook"
+   ],
+   "epub": "quiet-coast.epub",
+   "pages": 276,
+   "audioMinutes": 498,
+   "premium": true,
+   "rating": 4.4,
+   "ratings": 287,
+   "genres": [
+    "Mystery",
+    "Victoria"
+   ],
+   "blurb": "Iris inherits a house in Mallacoota from a woman she has never met, and a key to a room nobody will talk about."
+  },
+  {
+   "id": "year-of-small-things",
+   "title": "A Year of Small Things",
+   "author": "Lily Tran",
+   "cover": "cover-year-of-small-things",
+   "formats": [
+    "ebook"
+   ],
+   "epub": "year-of-small-things.epub",
+   "pages": 144,
+   "premium": false,
+   "rating": 4.6,
+   "ratings": 1520,
+   "genres": [
+    "Wellbeing"
+   ],
+   "blurb": "Fifty-two small practices, one for each week, for noticing the life you already have."
+  },
+  {
+   "id": "paper-trails",
+   "title": "Paper Trails",
+   "author": "Clare Whitfield",
+   "cover": "cover-paper-trails",
+   "formats": [
+    "ebook"
+   ],
+   "epub": "paper-trails.epub",
+   "pages": 224,
+   "premium": true,
+   "rating": 4.7,
+   "ratings": 356,
+   "genres": [
+    "Memoir"
+   ],
+   "blurb": "Sixty-one letters found behind a hot water service, and the search for the woman they were written to."
+  },
+  {
+   "id": "wild-coast",
+   "title": "The Wild Coast",
+   "author": "Eleanor Marsh",
+   "cover": "cover-wild-coast",
+   "formats": [
+    "ebook"
+   ],
+   "pages": 298,
+   "premium": true,
+   "rating": 4.5,
+   "ratings": 744,
+   "genres": [
+    "Historical fiction"
+   ],
+   "blurb": "The second Calloway novel. Meg takes the coast road west."
+  },
+  {
+   "id": "red-earth-song",
+   "title": "Red Earth Song",
+   "author": "Eleanor Marsh",
+   "cover": "cover-red-earth-song",
+   "formats": [
+    "ebook"
+   ],
+   "pages": 330,
+   "premium": true,
+   "rating": 4.6,
+   "ratings": 512,
+   "genres": [
+    "Historical fiction"
+   ],
+   "blurb": "A novel of the outback."
+  },
+  {
+   "id": "ballarat-nights",
+   "title": "Ballarat Nights",
+   "author": "Grace Doyle",
+   "cover": "cover-ballarat-nights",
+   "formats": [
+    "audiobook"
+   ],
+   "audioMinutes": 492,
+   "narrator": "Tom Ashby",
+   "premium": true,
+   "rating": 4.9,
+   "ratings": 1033,
+   "genres": [
+    "Historical fiction",
+    "Gold rush"
+   ],
+   "blurb": "An 1850s gold rush tale of adventure, hardship and fortune on the Victorian diggings."
+  }
+ ],
+ "daily": [
+  {
+   "id": "why-we-still-write-letters",
+   "date": "2026-11-09",
+   "kicker": "DAILY ESSAY",
+   "title": "Why we still write letters",
+   "author": "Clare Whitfield",
+   "authorPhoto": "portrait-clare-whitfield",
+   "hero": "hero-blue-mountains",
+   "minutes": 6,
+   "audio": "daily-letters.m4a",
+   "relatedTitle": "paper-trails",
+   "body": [
+    "In the morning light of the Blackheath post office, Mrs Higgins still weighs parcels on brass scales that have outlived three postal ministers. There is something quietly stubborn about dropping an envelope into the red pillar box on the corner, the hollow thud as it falls into darkness.",
+    "We send messages across satellites in milliseconds now, yet none of them smell of cedar drawers or carry the hesitation of an inked cross-out. A handwritten note asks you to sit still with one person in your mind, holding their silence alongside your own.",
+    "QUOTE:A letter is a small promise that someone will still be there when it arrives.",
+    "So I keep a box of good paper in the drawer by the kettle. Once a week, while the water boils, I write to someone. Most of them write back."
+   ]
+  },
+  {
+   "id": "the-town-that-gold-built",
+   "date": "2026-11-08",
+   "kicker": "DAILY ESSAY",
+   "title": "The town that gold built",
+   "author": "Clare Whitfield",
+   "authorPhoto": "portrait-clare-whitfield",
+   "hero": "photo-bendigo-street",
+   "minutes": 5,
+   "body": [
+    "Bendigo wears its fortune on its facades: wrought iron lace, sandstone banks and a fountain nobody quite knows what to do with."
+   ]
+  }
+ ],
+ "reference": [
+  {
+   "id": "victorian-gold-rush",
+   "title": "Victorian Gold Rush",
+   "year": "1851",
+   "path": [
+    "Reference",
+    "History",
+    "1850s"
+   ],
+   "photo": "photo-gold-pan",
+   "facts": [
+    [
+     "1851",
+     "Began"
+    ],
+    [
+     "Ballarat & Bendigo",
+     "Region"
+    ],
+    [
+     "7x",
+     "Population growth"
+    ]
+   ],
+   "summary": "How the 1851 discoveries turned a pastoral colony into a boom economy.",
+   "body": [
+    "Gold was found near Clunes and then at Ballarat in the winter of 1851. Within months, shepherds, clerks and sailors had walked off the job, and ships sat empty in Port Phillip Bay while their crews headed for the diggings.",
+    "The colony's population grew sevenfold in a decade. Licence fees, tent cities and boomtown architecture followed, along with the tensions that would end at the Eureka Stockade in 1854."
+   ],
+   "related": [
+    "red-dirt-country",
+    "ballarat-nights",
+    "salt-road"
+   ],
+   "seeAlso": [
+    "Eureka Stockade",
+    "Cobb & Co"
+   ]
+  },
+  {
+   "id": "eureka-stockade",
+   "title": "Eureka Stockade",
+   "year": "1854",
+   "path": [
+    "Reference",
+    "History",
+    "1850s"
+   ],
+   "photo": "photo-gold-pan",
+   "facts": [
+    [
+     "1854",
+     "Year"
+    ],
+    [
+     "Ballarat",
+     "Place"
+    ]
+   ],
+   "summary": "The miners' rebellion over licence fees at Ballarat.",
+   "body": [
+    "On 3 December 1854 soldiers stormed a hastily built stockade on the Eureka lead."
+   ],
+   "related": [
+    "ballarat-nights"
+   ],
+   "seeAlso": [
+    "Victorian Gold Rush"
+   ]
+  }
+ ]
+}
