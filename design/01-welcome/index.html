@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Welcome to Inkwell</title>
+<!-- Google Fonts: Baloo 2 & M PLUS Rounded 1c -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&amp;family=M+PLUS+Rounded+1c:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-container": "#004112",
+            "accent-tint": "#FEE6ED",
+            "surface-container-high": "#f8e3e6",
+            "on-tertiary-fixed-variant": "#00531a",
+            "surface-variant": "#f2dde0",
+            "surface-container": "#fee9ec",
+            "secondary-container": "#ff8aaa",
+            "warning-text": "#A75906",
+            "support": "#B6E36A",
+            "surface-alt": "#F8EDF0",
+            "on-error": "#ffffff",
+            "reader-paper": "#FBF6EE",
+            "error-container": "#ffdad6",
+            "inverse-on-surface": "#ffecef",
+            "text-tertiary": "#806A70",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed": "#3f001a",
+            "success-text": "#0E7C3A",
+            "inverse-primary": "#ffb1c2",
+            "surface": "#FFFFFF",
+            "primary-container": "#fb7299",
+            "on-secondary-container": "#781f3f",
+            "on-primary": "#ffffff",
+            "on-background": "#24191b",
+            "secondary": "#9d3c5b",
+            "on-tertiary": "#ffffff",
+            "secondary-fixed-dim": "#ffb1c4",
+            "outline": "#897175",
+            "on-primary-container": "#710032",
+            "on-secondary-fixed-variant": "#7f2544",
+            "on-secondary": "#ffffff",
+            "on-error-container": "#93000a",
+            "inverse-surface": "#3a2d30",
+            "accent-pressed": "#A14862",
+            "error": "#ba1a1a",
+            "text-primary": "#1F0C11",
+            "on-primary-fixed-variant": "#881741",
+            "background": "#FCF4F6",
+            "primary-fixed": "#ffd9e0",
+            "support-strong": "#72A21F",
+            "surface-bright": "#fff8f7",
+            "danger-text": "#CE2020",
+            "primary-fixed-dim": "#ffb1c2",
+            "on-primary-fixed": "#3f0019",
+            "danger-bg": "#FBE5E5",
+            "surface-tint": "#a83159",
+            "on-surface-variant": "#564145",
+            "surface-dim": "#ead5d8",
+            "surface-container-highest": "#f2dde0",
+            "surface-container-low": "#fff0f2",
+            "success-bg": "#E3F4E9",
+            "on-tertiary-fixed": "#002106",
+            "primary": "#a83159",
+            "text-secondary": "#5C454C",
+            "control-border": "#B7898E",
+            "tertiary-container": "#46b557",
+            "secondary-fixed": "#ffd9e0",
+            "border-hairline": "#EFDDE2",
+            "tertiary": "#006e25",
+            "warning-bg": "#FAEFE1",
+            "tertiary-fixed-dim": "#6fdd7a",
+            "outline-variant": "#ddbfc4",
+            "on-surface": "#24191b",
+            "tertiary-fixed": "#8bfb93"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "space-md": "0.75rem",
+            "margin": "1.25rem",
+            "space-lg": "1rem",
+            "gutter": "1rem",
+            "space-xl": "1.5rem",
+            "space-2xl": "2rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "title": [
+              "\"M PLUS Rounded 1c\""
+            ],
+            "display": [
+              "\"Baloo 2\""
+            ],
+            "label": [
+              "\"M PLUS Rounded 1c\""
+            ],
+            "body": [
+              "\"M PLUS Rounded 1c\""
+            ],
+            "caption": [
+              "\"M PLUS Rounded 1c\""
+            ],
+            "reader-body": [
+              "\"M PLUS Rounded 1c\""
+            ]
+          },
+          "fontSize": {
+            "title": [
+              "20px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "700"
+              }
+            ],
+            "display": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }
+            ],
+            "label": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "600"
+              }
+            ],
+            "body": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "400"
+              }
+            ],
+            "caption": [
+              "13px",
+              {
+                "lineHeight": "18px",
+                "fontWeight": "500"
+              }
+            ],
+            "reader-body": [
+              "18px",
+              {
+                "lineHeight": "28.8px",
+                "fontWeight": "400"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    /* Soft ambient card elevation */
+    .soft-shadow {
+      box-shadow: 0 1px 2px rgba(31, 12, 17, 0.04), 0 8px 24px rgba(31, 12, 17, 0.06);
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary antialiased min-h-screen flex items-center justify-center p-0 sm:p-4 select-none">
+<!-- Mobile Device Frame (393px × 852px viewport) -->
+<div class="relative w-full max-w-[393px] h-[852px] bg-background overflow-hidden flex flex-col justify-between shadow-2xl sm:rounded-[48px] border border-border-hairline">
+<!-- Top Hero Section (~56% of screen) -->
+<div class="relative w-full h-[475px] shrink-0 overflow-hidden">
+<!-- Real Photograph Hero Image -->
+<img alt="Woman sitting comfortably on a sunny sofa reading a novel and wearing headphones" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIga5GOMMIbplq3Vj0jnKry4Ltw6ZiBRy_HMLr2wGx-lTk42GLacS6558mATICPr4nKXnaxSDZ8f8JRRM9X8MflrRZkL7IkDgMmY73gJybvj-3eQ8Bbga6XljC3V130eZNOLMO18x4NL-UPBwqvLCq0vpUZwZy6z3HrFSW6puj4ix7SEyLrA5U3QgmUDdF4imrxaUTIEQJ0HFn8KWqWFMs2cChRGWAiHax9IPyVrQyUgTsJtCdThs2S0WuGD4hAzHiSh5N8suRyC0"/>
+<!-- Soft Warm Gradient Blend Over Bottom Edge into #FCF4F6 -->
+<div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background via-background/60 to-transparent pointer-events-none"></div>
+<!-- iOS Style Clean Status Bar -->
+<div class="absolute top-0 inset-x-0 h-12 pt-3 px-7 flex items-center justify-between z-20 text-text-primary">
+<span class="font-label text-caption font-semibold tracking-tight">9:41</span>
+<div class="flex items-center space-x-1.5 opacity-90">
+<span class="material-symbols-outlined text-[17px] leading-none">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[17px] leading-none">wifi</span>
+<span class="material-symbols-outlined text-[19px] leading-none">battery_full</span>
+</div>
+</div>
+<!-- Subtle Floating Australian Publisher Badge (Organic Real-World Accent) -->
+<div class="absolute bottom-5 right-5 z-20 flex items-center gap-1.5 bg-surface/90 backdrop-blur-md px-3 py-1.5 rounded-full border border-border-hairline soft-shadow">
+<span class="material-symbols-outlined text-primary text-[15px]">auto_stories</span>
+<span class="font-caption text-caption text-text-secondary tracking-normal">Melbourne &amp; Sydney</span>
+</div>
+</div>
+<!-- Content & Action Sheet Section (Lower ~44%) -->
+<div class="relative z-10 flex-1 flex flex-col justify-between px-5 pt-1 pb-9 bg-background">
+<!-- Editorial Brand & Headline Block -->
+<div class="flex flex-col items-start space-y-2">
+<!-- Brand Wordmark Lockup -->
+<div class="inline-flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-accent-tint flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[18px]">menu_book</span>
+</div>
+<span class="font-display text-title font-bold text-primary tracking-tight">Inkwell</span>
+</div>
+<!-- Headline -->
+<h1 class="font-display text-display text-text-primary tracking-tight leading-[1.18] pt-1">
+          Read it. Hear it.<br/>Every day.
+        </h1>
+<!-- Subcopy -->
+<p class="font-body text-body text-text-secondary leading-snug pt-0.5">
+          Ebooks, audiobooks and a fresh daily read from Australian authors.
+        </p>
+</div>
+<!-- Action Stack -->
+<div class="w-full flex flex-col items-center space-y-3 pt-3">
+<!-- Primary Action Button -->
+<button class="w-full h-[52px] bg-primary hover:bg-accent-pressed text-on-primary font-label text-body font-semibold rounded-full flex items-center justify-center transition-all duration-150 active:scale-95 shadow-md shadow-primary/20" type="button">
+          Create free account
+        </button>
+<!-- Secondary Action Button -->
+<button class="w-full h-[52px] bg-surface hover:bg-surface-container-low text-text-primary font-label text-body font-semibold rounded-full border-[1.5px] border-control-border flex items-center justify-center transition-all duration-150 active:scale-95" type="button">
+          I already have an account
+        </button>
+<!-- Caption Guarantee & Bottom Clearance -->
+<p class="font-caption text-caption text-text-tertiary text-center pt-1">
+          Free forever, upgrade anytime
+        </p>
+</div>
+<!-- iOS Home Indicator Safe Area spacer -->
+<div class="w-32 h-1 bg-text-primary/15 rounded-full mx-auto mt-2"></div>
+</div>
+</div>
+</body></html>

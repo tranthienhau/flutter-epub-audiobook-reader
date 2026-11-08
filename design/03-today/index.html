@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Inkwell ,  Today</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&amp;family=M+PLUS+Rounded+1c:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config Verbatim -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary": "#9d3c5b",
+            "danger-bg": "#FBE5E5",
+            "surface-container-low": "#fff0f2",
+            "warning-text": "#A75906",
+            "tertiary-fixed": "#8bfb93",
+            "surface-tint": "#a83159",
+            "background": "#FCF4F6",
+            "surface": "#FFFFFF",
+            "error": "#ba1a1a",
+            "reader-paper": "#FBF6EE",
+            "outline-variant": "#ddbfc4",
+            "on-surface": "#24191b",
+            "surface-container-highest": "#f2dde0",
+            "primary": "#a83159",
+            "surface-container": "#fee9ec",
+            "support-strong": "#72A21F",
+            "surface-variant": "#f2dde0",
+            "on-primary-fixed": "#3f0019",
+            "text-tertiary": "#806A70",
+            "warning-bg": "#FAEFE1",
+            "on-secondary-fixed": "#3f001a",
+            "support": "#B6E36A",
+            "on-tertiary-fixed-variant": "#00531a",
+            "tertiary-container": "#46b557",
+            "inverse-surface": "#3a2d30",
+            "accent-tint": "#FEE6ED",
+            "success-text": "#0E7C3A",
+            "on-surface-variant": "#564145",
+            "primary-container": "#fb7299",
+            "tertiary": "#006e25",
+            "on-primary-container": "#710032",
+            "danger-text": "#CE2020",
+            "on-tertiary-container": "#004112",
+            "surface-container-lowest": "#ffffff",
+            "surface-alt": "#F8EDF0",
+            "surface-container-high": "#f8e3e6",
+            "on-error-container": "#93000a",
+            "control-border": "#B7898E",
+            "text-primary": "#1F0C11",
+            "accent-pressed": "#A14862",
+            "on-secondary-fixed-variant": "#7f2544",
+            "on-primary-fixed-variant": "#881741",
+            "text-secondary": "#5C454C",
+            "on-tertiary": "#ffffff",
+            "on-error": "#ffffff",
+            "border-hairline": "#EFDDE2",
+            "secondary-container": "#ff8aaa",
+            "on-secondary-container": "#781f3f",
+            "on-tertiary-fixed": "#002106",
+            "on-secondary": "#ffffff",
+            "secondary-fixed-dim": "#ffb1c4",
+            "tertiary-fixed-dim": "#6fdd7a",
+            "success-bg": "#E3F4E9",
+            "on-primary": "#ffffff",
+            "inverse-primary": "#ffb1c2",
+            "secondary-fixed": "#ffd9e0",
+            "surface-dim": "#ead5d8",
+            "error-container": "#ffdad6",
+            "surface-bright": "#fff8f7",
+            "primary-fixed": "#ffd9e0",
+            "on-background": "#24191b",
+            "inverse-on-surface": "#ffecef",
+            "primary-fixed-dim": "#ffb1c2",
+            "outline": "#897175"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "1.5rem",
+            "space-lg": "1rem",
+            "space-md": "0.75rem",
+            "space-sm": "0.5rem",
+            "space-2xl": "2rem",
+            "gutter": "1rem",
+            "space-xs": "0.25rem",
+            "margin": "1.25rem"
+          },
+          "fontFamily": {
+            "label": [
+              "\"M PLUS Rounded 1c\""
+            ],
+            "caption": [
+              "\"M PLUS Rounded 1c\""
+            ],
+            "display": [
+              "\"Baloo 2\""
+            ],
+            "reader-body": [
+              "\"M PLUS Rounded 1c\""
+            ],
+            "body": [
+              "\"M PLUS Rounded 1c\""
+            ],
+            "title": [
+              "\"M PLUS Rounded 1c\""
+            ]
+          },
+          "fontSize": {
+            "label": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "600"
+              }
+            ],
+            "caption": [
+              "13px",
+              {
+                "lineHeight": "18px",
+                "fontWeight": "500"
+              }
+            ],
+            "display": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }
+            ],
+            "reader-body": [
+              "18px",
+              {
+                "lineHeight": "28.8px",
+                "fontWeight": "400"
+              }
+            ],
+            "body": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "400"
+              }
+            ],
+            "title": [
+              "20px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "700"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .custom-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary antialiased font-body min-h-screen flex justify-center selection:bg-accent-tint selection:text-primary">
+<!-- Mobile Viewport Container (393px × 852px) -->
+<div class="w-full max-w-[393px] min-h-[852px] bg-background relative flex flex-col pb-44 shadow-2xl overflow-x-hidden border-x border-border-hairline/40">
+<!-- 1. iOS Status Bar -->
+<header class="w-full pt-3 px-6 pb-2 flex justify-between items-center text-text-primary z-30 select-none">
+<span class="font-title text-caption tracking-tight font-bold">9:41</span>
+<div class="flex items-center space-x-1.5 text-text-primary">
+<span class="material-symbols-outlined text-[15px]" data-icon="signal_cellular_alt">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[15px]" data-icon="wifi">wifi</span>
+<span class="material-symbols-outlined text-[18px]" data-icon="battery_full">battery_full</span>
+</div>
+</header>
+<!-- 2. Header with User Salutation -->
+<section class="px-5 pt-2 pb-4 flex justify-between items-center">
+<div>
+<p class="font-caption text-caption text-text-secondary">Monday 9 November</p>
+<h1 class="font-display text-[26px] leading-[32px] text-text-primary tracking-tight">Good morning, Mia</h1>
+</div>
+<div class="relative group cursor-pointer">
+<img alt="Mia portrait" class="w-10 h-10 rounded-full object-cover border border-border-hairline shadow-sm ring-2 ring-surface active:scale-95 transition-transform duration-150" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1qiZmqpxfKqoUcczaSiyd8u2czMoViTrEpZO9m8cfCbAsrBa5ooFAT5mghIm86kIgjiaZ6posvEkiykQAgN_hdCwJz2RKpsoeXH0wkQBKBLi-ybZEpoOgRz6OASJx1MLAP0tEAlwsjQQfJ3mkmVN0vAi5bIm-YLAU1A42NfGnbCQM32fAn-4kZk_HU4t0j7CU2mM8qprLu5UKSa_sRVDkwIcfKQVVBMnArvUPuagx94U463bHoaj2jAMjH3zWgxBu_32g5l9-kVI"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-support rounded-full ring-2 ring-surface"></span>
+</div>
+</section>
+<!-- Main Content Flow -->
+<main class="space-y-6 flex-1">
+<!-- 3. FOCAL: Today's Read Hero Editorial Card -->
+<section class="px-5">
+<article class="relative w-full h-[230px] rounded-[20px] overflow-hidden shadow-[0_1px_2px_rgba(31,12,17,0.04),0_8px_24px_rgba(31,12,17,0.06)] group cursor-pointer active:scale-[0.99] transition-transform duration-150">
+<!-- Background Real Landscape Photo -->
+<img alt="Australian Blue Mountains mist" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY3yHYH8M3tF5cW6AtKIEZS-XTtr7PtDAmJsN5vWAD0x0LoL3IL1RAdSjAdlZ7QRuMRnQsUjiNyw56Zd7nC83Y7C7NuJy37DBBsQFzhA_TG6XT59x5XLFdBIVWle6KMr85ijUqYFYlc_EkNPbUCLd76EMwO4x2RRScKSSemfHKlKRE_ouBr3JZy9HT_oVBskPELkighnFXNRCLREhzG-i-947UvJbWoY6znLrll7TppD3_EQKajmkm8t0KYGSaotUDn8KC13TcVyQ"/>
+<!-- Gradient overlay for editorial clarity -->
+<div class="absolute inset-0 bg-gradient-to-t from-[#1F0C11]/90 via-[#710032]/45 to-transparent"></div>
+<!-- Editorial Card Content -->
+<div class="absolute inset-0 p-5 flex flex-col justify-end text-white">
+<div>
+<span class="inline-block px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[11px] font-label uppercase tracking-wider text-white mb-2">
+                DAILY ESSAY
+              </span>
+<h2 class="font-display text-xl leading-tight text-white mb-1 drop-shadow-sm">
+                Why we still write letters
+              </h2>
+<div class="flex items-center gap-1.5 text-white/90 font-caption text-caption">
+<span>Clare Whitfield</span>
+<span class="text-white/50">·</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]" data-icon="schedule">schedule</span>
+                  6 min read
+                </span>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- 4. Section: Continue -->
+<section class="px-5">
+<div class="flex items-center justify-between mb-3">
+<h2 class="font-title text-[18px] text-text-primary">Continue</h2>
+<span class="font-caption text-caption text-text-tertiary">2 in progress</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<!-- Card 1 (Ebook) -->
+<article class="bg-surface rounded-[20px] p-3.5 shadow-[0_1px_2px_rgba(31,12,17,0.04),0_8px_24px_rgba(31,12,17,0.06)] flex flex-col justify-between border border-border-hairline/60 hover:border-primary/20 transition-colors">
+<div class="flex items-start gap-2.5 mb-2.5">
+<img alt="The Salt Road Cover" class="w-[48px] h-[70px] rounded-[8px] object-cover shadow-sm flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl0KdIJHA0EGh24C0ZeK6bOeT6Lrm2nkfNMizjWfUPWVx6mWIjRghT8nAaRs1pyiGegrxKEJCAfbpzKV_CFznCOln3WegKcZbNSnrHbQEIoVyHjU9pF7QmP4AxQNMJgFPzBEmxNeFGSqMznHVAbAeoEpNjHdKpRlROSj-45X525lgssGvPavo7LKUsaMC0SPgEK5U43D4hIoKkIOQ6G-jNHnFFdKlHDrVKgDV3P2q7Qip-FI0OaBl-LMw1hBBIgPXXPUtpRlw-6XA"/>
+<div class="min-w-0 flex-1">
+<span class="inline-block font-label text-[11px] leading-tight px-2 py-0.5 rounded-full bg-accent-tint text-primary mb-1">
+                  Read
+                </span>
+<h3 class="font-title text-[13px] leading-tight text-text-primary truncate">The Salt Road</h3>
+<p class="font-caption text-[11px] text-text-secondary truncate mt-0.5">Eleanor Marsh</p>
+</div>
+</div>
+<div class="pt-1">
+<div class="w-full bg-surface-alt h-1 rounded-full overflow-hidden mb-1.5">
+<div class="bg-primary-container h-full rounded-full w-[42%]"></div>
+</div>
+<div class="flex justify-between items-center text-[11px] font-caption text-text-tertiary">
+<span>Page 142</span>
+<span class="font-label text-text-secondary">42%</span>
+</div>
+</div>
+</article>
+<!-- Card 2 (Audiobook) -->
+<article class="bg-surface rounded-[20px] p-3.5 shadow-[0_1px_2px_rgba(31,12,17,0.04),0_8px_24px_rgba(31,12,17,0.06)] flex flex-col justify-between border border-border-hairline/60 hover:border-primary/20 transition-colors">
+<div class="flex items-start gap-2.5 mb-2.5">
+<img alt="Harbour Lights Cover" class="w-[48px] h-[70px] rounded-[8px] object-cover shadow-sm flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlyhqXwhq6BDnp_AB7Zp9fjoZfXFHGoDRU6wmS3nAarm-GpfLd8I51PNASZZ0zk4UaEQWa0WjA_FV5urmJIo3O0yZxWsS8bUx8aj9tG_DDz9zue3DLHPSzxvB1so30PGFP-wzXdJEzxxP_ufepPGukI2_82N6js8xHuXbtjvFRQJtuXu3HOPUE17PP-IuI6EZWg53bI3CcNWAmghdObGJ_RzT8akyrwXW1BAij5ufNPqIoYYM72a1fn-PAyFL-JtR6kQQDAaSOBuo"/>
+<div class="min-w-0 flex-1">
+<span class="inline-flex items-center gap-0.5 font-label text-[11px] leading-tight px-2 py-0.5 rounded-full bg-surface-container text-primary mb-1">
+<span class="material-symbols-outlined text-[11px]" data-icon="headphones">headphones</span>
+                  Listen
+                </span>
+<h3 class="font-title text-[13px] leading-tight text-text-primary truncate">Harbour Lights</h3>
+<p class="font-caption text-[11px] text-text-secondary truncate mt-0.5">Jonah Reid</p>
+</div>
+</div>
+<div class="pt-1">
+<div class="w-full bg-surface-alt h-1 rounded-full overflow-hidden mb-1.5">
+<div class="bg-primary-container h-full rounded-full w-[68%]"></div>
+</div>
+<div class="flex justify-between items-center text-[11px] font-caption text-text-tertiary">
+<span>Ch 12</span>
+<span class="font-label text-text-secondary">2h 14m left</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- 5. Section: New this week -->
+<section class="pl-5">
+<div class="flex items-center justify-between pr-5 mb-3">
+<h2 class="font-title text-[18px] text-text-primary">New this week</h2>
+<button class="font-label text-label text-primary hover:text-accent-pressed transition-colors flex items-center gap-0.5">
+            See all
+            <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<!-- Horizontal Scrolling Book Rack -->
+<div class="flex space-x-3.5 overflow-x-auto pr-5 pb-2 custom-scrollbar">
+<!-- Book 1 -->
+<article class="flex-shrink-0 w-[116px] group cursor-pointer active:scale-95 transition-transform duration-150">
+<div class="w-[116px] h-[166px] rounded-[10px] overflow-hidden shadow-[0_1px_2px_rgba(31,12,17,0.06),0_6px_16px_rgba(31,12,17,0.08)] mb-2 relative">
+<img alt="The Salt Road by Eleanor Marsh" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl0KdIJHA0EGh24C0ZeK6bOeT6Lrm2nkfNMizjWfUPWVx6mWIjRghT8nAaRs1pyiGegrxKEJCAfbpzKV_CFznCOln3WegKcZbNSnrHbQEIoVyHjU9pF7QmP4AxQNMJgFPzBEmxNeFGSqMznHVAbAeoEpNjHdKpRlROSj-45X525lgssGvPavo7LKUsaMC0SPgEK5U43D4hIoKkIOQ6G-jNHnFFdKlHDrVKgDV3P2q7Qip-FI0OaBl-LMw1hBBIgPXXPUtpRlw-6XA"/>
+</div>
+<h3 class="font-title text-label text-text-primary truncate group-hover:text-primary transition-colors">The Salt Road</h3>
+<p class="font-caption text-caption text-text-secondary truncate">Eleanor Marsh</p>
+</article>
+<!-- Book 2 -->
+<article class="flex-shrink-0 w-[116px] group cursor-pointer active:scale-95 transition-transform duration-150">
+<div class="w-[116px] h-[166px] rounded-[10px] overflow-hidden shadow-[0_1px_2px_rgba(31,12,17,0.06),0_6px_16px_rgba(31,12,17,0.08)] mb-2 relative">
+<img alt="Harbour Lights by Jonah Reid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlyhqXwhq6BDnp_AB7Zp9fjoZfXFHGoDRU6wmS3nAarm-GpfLd8I51PNASZZ0zk4UaEQWa0WjA_FV5urmJIo3O0yZxWsS8bUx8aj9tG_DDz9zue3DLHPSzxvB1so30PGFP-wzXdJEzxxP_ufepPGukI2_82N6js8xHuXbtjvFRQJtuXu3HOPUE17PP-IuI6EZWg53bI3CcNWAmghdObGJ_RzT8akyrwXW1BAij5ufNPqIoYYM72a1fn-PAyFL-JtR6kQQDAaSOBuo"/>
+<span class="absolute top-1.5 right-1.5 w-6 h-6 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-xs" data-icon="headphones">headphones</span>
+</span>
+</div>
+<h3 class="font-title text-label text-text-primary truncate group-hover:text-primary transition-colors">Harbour Lights</h3>
+<p class="font-caption text-caption text-text-secondary truncate">Jonah Reid</p>
+</article>
+<!-- Book 3 -->
+<article class="flex-shrink-0 w-[116px] group cursor-pointer active:scale-95 transition-transform duration-150">
+<div class="w-[116px] h-[166px] rounded-[10px] overflow-hidden shadow-[0_1px_2px_rgba(31,12,17,0.06),0_6px_16px_rgba(31,12,17,0.08)] mb-2 relative">
+<img alt="Paper Bark &amp; Sun by Lily Tran" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoEAwoo249AjzexvHheatqaK7MPJgpmuGF5Afej67a4qGqBmPZSo5wcsB41vSLmPbw8iSXWSppGgwb8HRtpTeZ_ZL_HB6WBmP4DH_WfGMsJbWuSB1zMBe8uv4fZzxCeNiKqLb_kQRHDAbaU41h1VAQ_bPjQdIpRf2O3ch1RI9EPv0bZ3OIbusqYbv4lQKBaxXLLhs9ZnpiJ6aZJAP3TSt-U2V4JnLIAJESowsdGTRyzDmc-_VVNLaIgn_Kqcw-xaMD_SGvE0k3Hmg"/>
+</div>
+<h3 class="font-title text-label text-text-primary truncate group-hover:text-primary transition-colors">Paper Bark &amp; Sun</h3>
+<p class="font-caption text-caption text-text-secondary truncate">Lily Tran</p>
+</article>
+<!-- Book 4 -->
+<article class="flex-shrink-0 w-[116px] group cursor-pointer active:scale-95 transition-transform duration-150">
+<div class="w-[116px] h-[166px] rounded-[10px] overflow-hidden shadow-[0_1px_2px_rgba(31,12,17,0.06),0_6px_16px_rgba(31,12,17,0.08)] mb-2 relative">
+<img alt="Red Dust Dreaming by Sarah J. O'Connell" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1etvyNTC0A8jZJqF8Gn9dNeSPnuuogvsSRIPxHAMy8LFhsXGTYn1J-BwdJndGXMB8429pgnX7KFPqvjjZ413xkvnLgmwbWud3AEKVv_KFV0c8ZnYQomaKuYRKF5OQgnTT0J47F9KW2fafeXmWDjvXLXHkpbj2dML-c0Bc18zSOYRwvKlMWNQxBCBVVQZybqkeSqw7rWM8FoKAy_HGh6hjroR6g30k4dXDrd8LrjfmyJzC2BzJgvnKifTCyPoAed6_08TyL6_CFnE"/>
+</div>
+<h3 class="font-title text-label text-text-primary truncate group-hover:text-primary transition-colors">Red Dust Dreaming</h3>
+<p class="font-caption text-caption text-text-secondary truncate">Sarah J. O'Connell</p>
+</article>
+</div>
+</section>
+<!-- Editorial Quote / Australian Spotlight Card -->
+<section class="px-5 pb-2">
+<div class="bg-surface rounded-[20px] p-4 border border-border-hairline shadow-[0_1px_2px_rgba(31,12,17,0.04)] flex items-center gap-3.5">
+<div class="w-10 h-10 rounded-full bg-accent-tint text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="flex-1 min-w-0">
+<span class="font-label text-[11px] text-primary uppercase tracking-wide block">Spotlight on Australian voices</span>
+<p class="font-caption text-caption text-text-secondary leading-snug">Discover stories from the red center to the southern coastlines.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- 6. Persistent Mini-Player Component (Floated directly above bottom nav) -->
+<aside class="fixed bottom-[74px] left-0 right-0 max-w-[393px] mx-auto px-4 z-40">
+<div class="relative bg-surface rounded-[16px] border border-border-hairline shadow-[0_4px_20px_rgba(31,12,17,0.08)] overflow-hidden">
+<!-- Thin top progress line -->
+<div class="absolute top-0 left-0 right-0 h-[2.5px] bg-surface-alt">
+<div class="h-full bg-primary-container w-[72%]"></div>
+</div>
+<div class="p-2.5 flex items-center justify-between gap-3">
+<!-- Thumbnail & Track Info -->
+<div class="flex items-center gap-3 min-w-0 flex-1 cursor-pointer">
+<img alt="Harbour Lights Audiobook" class="w-11 h-11 rounded-[8px] object-cover shadow-sm flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlyhqXwhq6BDnp_AB7Zp9fjoZfXFHGoDRU6wmS3nAarm-GpfLd8I51PNASZZ0zk4UaEQWa0WjA_FV5urmJIo3O0yZxWsS8bUx8aj9tG_DDz9zue3DLHPSzxvB1so30PGFP-wzXdJEzxxP_ufepPGukI2_82N6js8xHuXbtjvFRQJtuXu3HOPUE17PP-IuI6EZWg53bI3CcNWAmghdObGJ_RzT8akyrwXW1BAij5ufNPqIoYYM72a1fn-PAyFL-JtR6kQQDAaSOBuo"/>
+<div class="min-w-0">
+<h4 class="font-title text-[13px] leading-snug text-text-primary truncate">Harbour Lights</h4>
+<p class="font-caption text-[11px] text-text-tertiary truncate">Ch 12 · 18:42 left</p>
+</div>
+</div>
+<!-- Player Controls -->
+<div class="flex items-center gap-1.5 flex-shrink-0">
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-text-secondary hover:text-text-primary active:scale-95 transition-transform" title="Rewind 15 seconds">
+<span class="material-symbols-outlined text-[18px]" data-icon="replay_10">replay_10</span>
+</button>
+<button class="w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center shadow-sm active:scale-95 active:bg-accent-pressed transition-all" title="Pause">
+<span class="material-symbols-outlined text-[20px]" data-icon="pause" style="font-variation-settings: 'FILL' 1;">pause</span>
+</button>
+</div>
+</div>
+</div>
+</aside>
+<!-- 7. Shared Component: BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pt-2 pb-6 max-w-md mx-auto bg-surface dark:bg-surface border-t border-border-hairline dark:border-outline-variant shadow-[0_-4px_16px_rgba(31,12,17,0.04)]">
+<!-- Tab 1: Today (ACTIVE) -->
+<a aria-current="page" class="flex flex-col items-center justify-center bg-accent-tint dark:bg-on-secondary-container text-primary dark:text-primary-fixed rounded-full px-4 py-1.5 active:scale-95 transition-transform duration-150" href="#today">
+<span class="material-symbols-outlined text-[22px]" data-icon="wb_sunny">wb_sunny</span>
+<span class="font-label text-caption mt-0.5 text-primary">Today</span>
+</a>
+<!-- Tab 2: Library (Inactive) -->
+<a class="flex flex-col items-center justify-center text-text-tertiary dark:text-outline px-4 py-1.5 hover:text-primary dark:hover:text-primary-fixed transition-colors active:scale-95 transition-transform duration-150" href="#library">
+<span class="material-symbols-outlined text-[22px]" data-icon="auto_stories">auto_stories</span>
+<span class="font-label text-caption mt-0.5">Library</span>
+</a>
+<!-- Tab 3: Search (Inactive) -->
+<a class="flex flex-col items-center justify-center text-text-tertiary dark:text-outline px-4 py-1.5 hover:text-primary dark:hover:text-primary-fixed transition-colors active:scale-95 transition-transform duration-150" href="#search">
+<span class="material-symbols-outlined text-[22px]" data-icon="search">search</span>
+<span class="font-label text-caption mt-0.5">Search</span>
+</a>
+<!-- Tab 4: Profile (Inactive) -->
+<a class="flex flex-col items-center justify-center text-text-tertiary dark:text-outline px-4 py-1.5 hover:text-primary dark:hover:text-primary-fixed transition-colors active:scale-95 transition-transform duration-150" href="#profile">
+<span class="material-symbols-outlined text-[22px]" data-icon="person">person</span>
+<span class="font-label text-caption mt-0.5">Profile</span>
+</a>
+</nav>
+</div>
+</body></html>

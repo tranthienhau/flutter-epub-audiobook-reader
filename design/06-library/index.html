@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Inkwell - Library</title>
+<!-- Google Fonts: Baloo 2 and M PLUS Rounded 1c -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&amp;family=M+PLUS+Rounded+1c:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary": "#ffffff",
+            "secondary-container": "#ff8aaa",
+            "error": "#ba1a1a",
+            "inverse-surface": "#3a2d30",
+            "outline": "#897175",
+            "danger-text": "#CE2020",
+            "text-primary": "#1F0C11",
+            "surface-tint": "#a83159",
+            "on-tertiary-fixed-variant": "#00531a",
+            "surface-container": "#fee9ec",
+            "surface-container-low": "#fff0f2",
+            "success-bg": "#E3F4E9",
+            "accent-pressed": "#A14862",
+            "on-primary-fixed-variant": "#881741",
+            "reader-paper": "#FBF6EE",
+            "surface-container-highest": "#f2dde0",
+            "on-secondary": "#ffffff",
+            "background": "#FCF4F6",
+            "control-border": "#B7898E",
+            "surface": "#FFFFFF",
+            "surface-container-high": "#f8e3e6",
+            "text-tertiary": "#806A70",
+            "accent-tint": "#FEE6ED",
+            "text-secondary": "#5C454C",
+            "surface-variant": "#f2dde0",
+            "secondary": "#9d3c5b",
+            "warning-bg": "#FAEFE1",
+            "on-surface": "#24191b",
+            "warning-text": "#A75906",
+            "on-tertiary-fixed": "#002106",
+            "on-tertiary-container": "#004112",
+            "tertiary-fixed": "#8bfb93",
+            "tertiary": "#006e25",
+            "on-surface-variant": "#564145",
+            "inverse-on-surface": "#ffecef",
+            "success-text": "#0E7C3A",
+            "error-container": "#ffdad6",
+            "on-error": "#ffffff",
+            "on-background": "#24191b",
+            "surface-alt": "#F8EDF0",
+            "secondary-fixed-dim": "#ffb1c4",
+            "on-secondary-fixed": "#3f001a",
+            "on-primary": "#ffffff",
+            "tertiary-container": "#46b557",
+            "support": "#B6E36A",
+            "surface-dim": "#ead5d8",
+            "support-strong": "#72A21F",
+            "on-error-container": "#93000a",
+            "secondary-fixed": "#ffd9e0",
+            "primary-fixed": "#ffd9e0",
+            "danger-bg": "#FBE5E5",
+            "primary": "#a83159",
+            "outline-variant": "#ddbfc4",
+            "tertiary-fixed-dim": "#6fdd7a",
+            "primary-container": "#fb7299",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-container": "#710032",
+            "inverse-primary": "#ffb1c2",
+            "on-secondary-fixed-variant": "#7f2544",
+            "on-primary-fixed": "#3f0019",
+            "primary-fixed-dim": "#ffb1c2",
+            "border-hairline": "#EFDDE2",
+            "surface-bright": "#fff8f7",
+            "on-secondary-container": "#781f3f"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "margin": "1.25rem",
+            "space-xl": "1.5rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "space-lg": "1rem",
+            "space-md": "0.75rem",
+            "space-2xl": "2rem"
+          },
+          "fontFamily": {
+            "display": ["\"Baloo 2\""],
+            "reader-body": ["\"M PLUS Rounded 1c\""],
+            "title": ["\"M PLUS Rounded 1c\""],
+            "caption": ["\"M PLUS Rounded 1c\""],
+            "body": ["\"M PLUS Rounded 1c\""],
+            "label": ["\"M PLUS Rounded 1c\""]
+          },
+          "fontSize": {
+            "display": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }
+            ],
+            "reader-body": [
+              "18px",
+              {
+                "lineHeight": "28.8px",
+                "fontWeight": "400"
+              }
+            ],
+            "title": [
+              "20px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "700"
+              }
+            ],
+            "caption": [
+              "13px",
+              {
+                "lineHeight": "18px",
+                "fontWeight": "500"
+              }
+            ],
+            "body": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "400"
+              }
+            ],
+            "label": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "600"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+    }
+    .material-symbols-fill {
+      font-variation-settings: 'FILL' 1;
+    }
+    /* Hide scrollbar for smooth carousel/scroll behavior */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary flex justify-center items-center min-h-screen p-0 m-0 antialiased selection:bg-accent-tint selection:text-primary">
+<!-- Mobile Frame Container (iPhone 393 x 852) -->
+<main class="w-[393px] h-[852px] bg-background relative flex flex-col overflow-hidden shadow-2xl rounded-[44px] border-[6px] border-text-primary/10">
+<!-- iOS Status Bar (59px Safe Area) -->
+<header class="w-full pt-3 px-7 flex justify-between items-center z-30 select-none">
+<span class="font-label text-[15px] font-bold text-text-primary tracking-tight">9:41</span>
+<div class="flex items-center space-x-2 text-text-primary">
+<span class="material-symbols-outlined text-[17px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[17px]">wifi</span>
+<span class="material-symbols-outlined text-[20px]">battery_full</span>
+</div>
+</header>
+<!-- Top App Bar Component -->
+<section class="flex justify-between items-center w-full px-5 py-2.5 max-w-md mx-auto z-20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[26px]">menu_book</span>
+<span class="font-display text-[22px] font-bold text-primary tracking-tight">Inkwell</span>
+</div>
+<div class="flex items-center gap-2">
+<button aria-label="Search shelf" class="w-9 h-9 rounded-full bg-surface flex items-center justify-center shadow-sm text-text-primary hover:opacity-80 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</button>
+<button aria-label="More options" class="w-9 h-9 rounded-full bg-surface flex items-center justify-center shadow-sm text-text-primary hover:opacity-80 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</section>
+<!-- Scrollable Canvas Area -->
+<div class="flex-1 overflow-y-auto no-scrollbar pb-36">
+<!-- Shelf Header & Title -->
+<section class="px-5 pt-1.5 pb-3">
+<div class="flex items-baseline justify-between">
+<h1 class="font-display text-display text-text-primary tracking-tight">Library</h1>
+<span class="font-caption text-caption text-text-tertiary">6 Titles</span>
+</div>
+<!-- Filter Pills & Sorting Bar -->
+<div class="flex items-center justify-between mt-3 gap-2">
+<!-- Segmented Filter Pills -->
+<div class="flex items-center gap-1.5 bg-surface-alt/70 p-1 rounded-full border border-border-hairline">
+<button class="bg-primary text-on-primary font-label text-[13px] px-3.5 py-1 rounded-full shadow-sm font-semibold transition-all">
+              All
+            </button>
+<button class="text-text-secondary hover:text-text-primary font-label text-[13px] px-3 py-1 rounded-full font-medium transition-colors">
+              Ebooks
+            </button>
+<button class="text-text-secondary hover:text-text-primary font-label text-[13px] px-3 py-1 rounded-full font-medium transition-colors">
+              Audiobooks
+            </button>
+</div>
+<!-- Sort Button Chip -->
+<button class="flex items-center gap-1 bg-surface border border-border-hairline px-3 py-1.5 rounded-full shadow-sm text-text-primary hover:opacity-80 active:scale-95 transition-all">
+<span class="font-label text-[12px] font-semibold">Recent</span>
+<span class="material-symbols-outlined text-[16px] text-text-tertiary">swap_vert</span>
+</button>
+</div>
+</section>
+<!-- Focal 2-Column Book Grid -->
+<section class="grid grid-cols-2 gap-4 px-5 pt-1">
+<!-- Book 1: The Salt Road -->
+<article class="flex flex-col group cursor-pointer">
+<div class="relative w-full aspect-[2/3] rounded-[10px] overflow-hidden shadow-[0_8px_20px_rgba(31,12,17,0.08)] bg-surface border border-border-hairline group-hover:shadow-[0_12px_24px_rgba(31,12,17,0.12)] transition-shadow">
+<img alt="The Salt Road" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrDgtPIMsW3dhML8nyV6brsKZ3sMBm--H24X7M5D7VA14El7oRIOuz9O0ridIyFfADGO7nKXaM6Pd86Dzj8mMdTcHZC-VJL3XsbAEuKLqt_fipWkV8t_aQ9Kf1SHTjgCuUk1MuuSoDzK5jNMU0pHL8kFyt5ctuubYb1EW_ZQ5DILA78xlPlOzdzM17WojPSLlNfmn0syOHBXoyr1rmWmvuMLUDuxyCcXmLws7qqeqY1mwwvVckJX5Gd3L5o"/>
+<!-- Offline Download Badge -->
+<div class="absolute top-2 right-2 w-6 h-6 rounded-full bg-text-primary/70 backdrop-blur-md flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[14px]">arrow_circle_down</span>
+</div>
+</div>
+<div class="mt-2.5 px-0.5">
+<h2 class="font-title text-[15px] leading-tight font-bold text-text-primary truncate">The Salt Road</h2>
+<p class="font-caption text-[13px] text-text-tertiary truncate mt-0.5">Eleanor Marsh</p>
+<!-- Progress Bar -->
+<div class="w-full bg-surface-alt h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 42%;"></div>
+</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-caption text-[11px] text-primary font-bold">42%</span>
+<span class="font-caption text-[11px] text-text-tertiary">Page 142</span>
+</div>
+</div>
+</article>
+<!-- Book 2: Harbour Lights (Audiobook) -->
+<article class="flex flex-col group cursor-pointer">
+<div class="relative w-full aspect-[2/3] rounded-[10px] overflow-hidden shadow-[0_8px_20px_rgba(31,12,17,0.08)] bg-surface border border-border-hairline group-hover:shadow-[0_12px_24px_rgba(31,12,17,0.12)] transition-shadow">
+<img alt="Harbour Lights" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrChcyKu7PrT6PyPQhng-O8dNhFtunXDXNzLiwEow6_7KKePUtcf7zQ6O3V3MqUdGwL4eqOk_j_rxb7AJpjS6Hn9Tb3mPtSFOAxcD_T-2lv6nwURev9eggW5Kuizpx_Ev_Uj-VGYHIi9bI1_HvShs9mqAg-Olhoaupkwm_4xJgkJvvD8TMCOOSfFt_NWnLoaj3nDF8WniWovg_umgqfhz6kAdJVGXLwPl9N47XA_azWVbEanwPG2vDLCR0Y"/>
+<!-- Audio Badge Top Left -->
+<div class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-surface/90 backdrop-blur-sm shadow-sm flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[12px] material-symbols-fill">headphones</span>
+<span class="font-caption text-[10px] font-bold">Audio</span>
+</div>
+<!-- Download Checkmark -->
+<div class="absolute top-2 right-2 w-6 h-6 rounded-full bg-text-primary/70 backdrop-blur-md flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+</div>
+</div>
+<div class="mt-2.5 px-0.5">
+<h2 class="font-title text-[15px] leading-tight font-bold text-text-primary truncate">Harbour Lights</h2>
+<p class="font-caption text-[13px] text-text-tertiary truncate mt-0.5">Jonah Reid</p>
+<!-- Progress Bar -->
+<div class="w-full bg-surface-alt h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 61%;"></div>
+</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-caption text-[11px] text-primary font-bold">61%</span>
+<span class="font-caption text-[11px] text-text-tertiary">2h 14m left</span>
+</div>
+</div>
+</article>
+<!-- Book 3: Red Dirt Country -->
+<article class="flex flex-col group cursor-pointer">
+<div class="relative w-full aspect-[2/3] rounded-[10px] overflow-hidden shadow-[0_8px_20px_rgba(31,12,17,0.08)] bg-surface border border-border-hairline group-hover:shadow-[0_12px_24px_rgba(31,12,17,0.12)] transition-shadow">
+<img alt="Red Dirt Country" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrBY-aVgZIRqfclbIIkKpnCc3EcgKXu5PYKwPZfTbBHEtDVZ4Ai_e6yAGA3WEn8ebkGvgEHZq_0No4A2DSlX1T6C4-U_I4LvUyMxQ4VQsSaLTrSI0z_yDmz39AP1O1E1vI8221wjm0yW6THVPOFVk9fGr-FJwgACPIejnRBzR8VC5-5TzsHyg8bM4AQUl0LoPGdtD0Hcb8dONL93EjAswVYHchVC6khnaE1apeOaxtuX07ErP1h8BRHbqds"/>
+</div>
+<div class="mt-2.5 px-0.5">
+<h2 class="font-title text-[15px] leading-tight font-bold text-text-primary truncate">Red Dirt Country</h2>
+<p class="font-caption text-[13px] text-text-tertiary truncate mt-0.5">Sam Okafor</p>
+<!-- Progress Bar -->
+<div class="w-full bg-surface-alt h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 8%;"></div>
+</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-caption text-[11px] text-primary font-bold">8% read</span>
+<span class="font-caption text-[11px] text-text-tertiary">Ch 2</span>
+</div>
+</div>
+</article>
+<!-- Book 4: Notes from Hobart -->
+<article class="flex flex-col group cursor-pointer">
+<div class="relative w-full aspect-[2/3] rounded-[10px] overflow-hidden shadow-[0_8px_20px_rgba(31,12,17,0.08)] bg-surface border border-border-hairline group-hover:shadow-[0_12px_24px_rgba(31,12,17,0.12)] transition-shadow">
+<img alt="Notes from Hobart" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMVongTpvlfxgamUBthtx-ZH9epJzLDeL4ehOIUC7juqxbmHYtLXyoAZJuZmzDK1qACRLrvRMkdb-lWkC7P9s4TqkN6ot3q9Klr4UVoVSvW1W8vsZUnQpMCPu-MJUXzXi4WUz6luOP_cTDF5gNrCgwKcklLj3VHzMM2XpuiFO36YKXRcNLguBJDnaXEqY8aegITRrSwvEHg-1GR866PE1CstPEArgOdxliCkXqmf2wc4SYx866EtkkIGj5WX-1rvXJZ7CRsOUK3fE"/>
+<!-- Finished Status Pill -->
+<div class="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-success-bg/95 border border-success-text/20 backdrop-blur-sm flex items-center gap-1 text-success-text shadow-sm">
+<span class="material-symbols-outlined text-[12px] material-symbols-fill">check</span>
+<span class="font-caption text-[10px] font-bold">Finished</span>
+</div>
+</div>
+<div class="mt-2.5 px-0.5">
+<h2 class="font-title text-[15px] leading-tight font-bold text-text-primary truncate">Notes from Hobart</h2>
+<p class="font-caption text-[13px] text-text-tertiary truncate mt-0.5">Ruth Lim</p>
+<div class="flex items-center gap-1 mt-2 text-success-text">
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+<span class="font-caption text-[11px] font-bold">Completed Oct 12</span>
+</div>
+</div>
+</article>
+<!-- Book 5: The Quiet Coast -->
+<article class="flex flex-col group cursor-pointer">
+<div class="relative w-full aspect-[2/3] rounded-[10px] overflow-hidden shadow-[0_8px_20px_rgba(31,12,17,0.08)] bg-surface border border-border-hairline group-hover:shadow-[0_12px_24px_rgba(31,12,17,0.12)] transition-shadow">
+<img alt="The Quiet Coast" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFblfRJabJpxloHBZhTL7i-4ChrxhhgXLTCPSdrx5zra_WuLiM64VTF_5U-_P8kQ2_A2N-PZPOYd6V4SEoJwqxhkWH9COk2-_ju05Q9OK9b6c74_GX_mJ55Mgwwo4fkCcwUTYGziBND9YT_Wv7Tui3QYlINmzMfyZYDSq_jcQy62aGiG3l93y5CqTp7EjGRupeYVtuHAgFe6nYvCIkyJlzM4fWwOEy7ndKWAHGRkQ6oDZ0rrTu72HHtTxl2hL7E1Tov_evgozTHrA"/>
+<!-- Premium Crown Badge -->
+<div class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-support flex items-center gap-1 text-text-primary shadow-sm">
+<span class="material-symbols-outlined text-[12px] material-symbols-fill">crown</span>
+<span class="font-caption text-[10px] font-bold">Premium</span>
+</div>
+</div>
+<div class="mt-2.5 px-0.5">
+<h2 class="font-title text-[15px] leading-tight font-bold text-text-primary truncate">The Quiet Coast</h2>
+<p class="font-caption text-[13px] text-text-tertiary truncate mt-0.5">Ava Bennett</p>
+<div class="flex items-center gap-1.5 mt-2">
+<span class="w-2 h-2 rounded-full bg-control-border"></span>
+<span class="font-caption text-[11px] text-text-secondary font-medium">Unread · 312 pp</span>
+</div>
+</div>
+</article>
+<!-- Book 6: A Year of Small Things -->
+<article class="flex flex-col group cursor-pointer">
+<div class="relative w-full aspect-[2/3] rounded-[10px] overflow-hidden shadow-[0_8px_20px_rgba(31,12,17,0.08)] bg-surface border border-border-hairline group-hover:shadow-[0_12px_24px_rgba(31,12,17,0.12)] transition-shadow">
+<img alt="A Year of Small Things" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNDv-uq_Xu3mK3Za3zyVG0cDFK13kCxKjM46rPXJAIgWrHRTmECJlfxEl_n3s52t-SQVr713omUvkHs7bn0_O3cLNuO1pujumiv2G9r0TRvdS8gBWlTHd3pJjqKNGgiwa1ik-tWJIfpmK4ohgXAGvP14l2ThDLG-NMl60afAkiLRpYqPYlAXbRw1vgzpXfNWlGuV6YFCaXhTHg_IMKfD_yVCHYLn5xyfzfDoRILqfna8nQx8o1F-Q4gtpjEXJeCqoDqUnBqFVvsG0"/>
+<!-- New Arrival Badge -->
+<div class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-accent-tint border border-primary/20 flex items-center text-primary shadow-sm">
+<span class="font-caption text-[10px] font-bold">New</span>
+</div>
+</div>
+<div class="mt-2.5 px-0.5">
+<h2 class="font-title text-[15px] leading-tight font-bold text-text-primary truncate">A Year of Small Things</h2>
+<p class="font-caption text-[13px] text-text-tertiary truncate mt-0.5">Lily Tran</p>
+<div class="flex items-center gap-1.5 mt-2">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-caption text-[11px] text-text-secondary font-medium">Added yesterday</span>
+</div>
+</div>
+</article>
+</section>
+<!-- Empty Reading Space Buffer -->
+<div class="h-6"></div>
+</div>
+<!-- Mini Player Card (Floating right above BottomNavBar) -->
+<div class="absolute bottom-[76px] left-0 w-full px-4 z-40">
+<div class="bg-surface rounded-2xl shadow-[0_4px_16px_rgba(31,12,17,0.08)] border border-border-hairline overflow-hidden p-2 flex items-center justify-between relative active:scale-[0.99] transition-transform">
+<!-- Thin top progress line -->
+<div class="absolute top-0 left-0 w-full h-[3px] bg-surface-alt">
+<div class="bg-primary-container h-full" style="width: 61%;"></div>
+</div>
+<div class="flex items-center gap-3">
+<img alt="Miniplayer Cover" class="w-12 h-12 rounded-[10px] object-cover border border-border-hairline flex-shrink-0 shadow-sm" src="https://lh3.googleusercontent.com/aida/ALJJyrChcyKu7PrT6PyPQhng-O8dNhFtunXDXNzLiwEow6_7KKePUtcf7zQ6O3V3MqUdGwL4eqOk_j_rxb7AJpjS6Hn9Tb3mPtSFOAxcD_T-2lv6nwURev9eggW5Kuizpx_Ev_Uj-VGYHIi9bI1_HvShs9mqAg-Olhoaupkwm_4xJgkJvvD8TMCOOSfFt_NWnLoaj3nDF8WniWovg_umgqfhz6kAdJVGXLwPl9N47XA_azWVbEanwPG2vDLCR0Y"/>
+<div class="flex flex-col min-w-0 pr-2">
+<div class="flex items-center gap-1.5">
+<span class="font-title text-[14px] font-bold text-text-primary truncate">Harbour Lights</span>
+<span class="material-symbols-outlined text-[13px] text-primary">graphic_eq</span>
+</div>
+<span class="font-caption text-[12px] text-text-secondary truncate mt-0.5">Ch 12 · 18:42 left</span>
+</div>
+</div>
+<!-- Audio Player Quick Controls -->
+<div class="flex items-center gap-2 pr-1">
+<button aria-label="Rewind 10 seconds" class="w-8 h-8 rounded-full flex items-center justify-center text-text-secondary hover:text-text-primary active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">replay_10</span>
+</button>
+<button aria-label="Pause" class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-md active:bg-accent-pressed active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px] material-symbols-fill">pause</span>
+</button>
+</div>
+</div>
+</div>
+<!-- BottomNavBar Shared Component -->
+<!-- Destination 4: "Today", "Library", "Search", "Profile" -->
+<!-- Active Destination: "Library" (matches shelf intent) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pt-2 pb-6 max-w-md mx-auto bg-surface border-t border-border-hairline shadow-[0_-4px_16px_rgba(31,12,17,0.04)]">
+<!-- Tab 1: Today -->
+<button class="flex flex-col items-center justify-center text-text-tertiary px-4 py-1.5 hover:text-primary transition-colors active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-[24px]">wb_sunny</span>
+<span class="font-label text-caption mt-0.5">Today</span>
+</button>
+<!-- Tab 2: Library (ACTIVE) -->
+<button class="flex flex-col items-center justify-center bg-accent-tint text-primary rounded-full px-4 py-1.5 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-[24px] material-symbols-fill">auto_stories</span>
+<span class="font-label text-caption font-bold mt-0.5">Library</span>
+</button>
+<!-- Tab 3: Search -->
+<button class="flex flex-col items-center justify-center text-text-tertiary px-4 py-1.5 hover:text-primary transition-colors active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-[24px]">search</span>
+<span class="font-label text-caption mt-0.5">Search</span>
+</button>
+<!-- Tab 4: Profile -->
+<button class="flex flex-col items-center justify-center text-text-tertiary px-4 py-1.5 hover:text-primary transition-colors active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<span class="font-label text-caption mt-0.5">Profile</span>
+</button>
+</nav>
+<!-- iOS Home Indicator -->
+<div class="absolute bottom-1 left-1/2 -translate-x-1/2 w-32 h-1 bg-text-primary/20 rounded-full z-50 pointer-events-none"></div>
+</main>
+</body></html>

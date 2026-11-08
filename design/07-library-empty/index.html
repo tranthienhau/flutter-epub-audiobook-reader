@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Library - Inkwell</title>
+<!-- Google Fonts: Baloo 2 & M PLUS Rounded 1c -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&amp;family=M+PLUS+Rounded+1c:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration Verbatim -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "control-border": "#B7898E",
+            "on-secondary-container": "#781f3f",
+            "text-tertiary": "#806A70",
+            "inverse-on-surface": "#ffecef",
+            "on-surface-variant": "#564145",
+            "on-tertiary-container": "#004112",
+            "danger-text": "#CE2020",
+            "success-bg": "#E3F4E9",
+            "secondary": "#9d3c5b",
+            "surface-variant": "#f2dde0",
+            "secondary-container": "#ff8aaa",
+            "warning-bg": "#FAEFE1",
+            "success-text": "#0E7C3A",
+            "on-tertiary": "#ffffff",
+            "surface-container-high": "#f8e3e6",
+            "surface-alt": "#F8EDF0",
+            "primary-fixed-dim": "#ffb1c2",
+            "inverse-primary": "#ffb1c2",
+            "on-primary-fixed": "#3f0019",
+            "primary": "#a83159",
+            "surface-bright": "#fff8f7",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed-variant": "#00531a",
+            "on-error-container": "#93000a",
+            "primary-fixed": "#ffd9e0",
+            "tertiary-container": "#46b557",
+            "support-strong": "#72A21F",
+            "on-secondary-fixed-variant": "#7f2544",
+            "on-background": "#24191b",
+            "border-hairline": "#EFDDE2",
+            "on-secondary-fixed": "#3f001a",
+            "text-primary": "#1F0C11",
+            "surface-container": "#fee9ec",
+            "danger-bg": "#FBE5E5",
+            "on-primary-fixed-variant": "#881741",
+            "surface-container-lowest": "#ffffff",
+            "on-error": "#ffffff",
+            "tertiary-fixed-dim": "#6fdd7a",
+            "background": "#FCF4F6",
+            "on-surface": "#24191b",
+            "accent-tint": "#FEE6ED",
+            "surface-dim": "#ead5d8",
+            "warning-text": "#A75906",
+            "tertiary-fixed": "#8bfb93",
+            "surface": "#FFFFFF",
+            "outline-variant": "#ddbfc4",
+            "outline": "#897175",
+            "surface-container-highest": "#f2dde0",
+            "secondary-fixed": "#ffd9e0",
+            "surface-container-low": "#fff0f2",
+            "support": "#B6E36A",
+            "on-primary-container": "#710032",
+            "inverse-surface": "#3a2d30",
+            "accent-pressed": "#A14862",
+            "text-secondary": "#5C454C",
+            "tertiary": "#006e25",
+            "surface-tint": "#a83159",
+            "error": "#ba1a1a",
+            "primary-container": "#fb7299",
+            "error-container": "#ffdad6",
+            "secondary-fixed-dim": "#ffb1c4",
+            "on-tertiary-fixed": "#002106",
+            "on-secondary": "#ffffff",
+            "reader-paper": "#FBF6EE"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "0.75rem",
+            "space-sm": "0.5rem",
+            "margin": "1.25rem",
+            "gutter": "1rem",
+            "space-xl": "1.5rem",
+            "space-lg": "1rem",
+            "space-2xl": "2rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "caption": [
+              "\"M PLUS Rounded 1c\""
+            ],
+            "body": [
+              "\"M PLUS Rounded 1c\""
+            ],
+            "title": [
+              "\"M PLUS Rounded 1c\""
+            ],
+            "display": [
+              "\"Baloo 2\""
+            ],
+            "label": [
+              "\"M PLUS Rounded 1c\""
+            ],
+            "reader-body": [
+              "\"M PLUS Rounded 1c\""
+            ]
+          },
+          "fontSize": {
+            "caption": [
+              "13px",
+              {
+                "lineHeight": "18px",
+                "fontWeight": "500"
+              }
+            ],
+            "body": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "400"
+              }
+            ],
+            "title": [
+              "20px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "700"
+              }
+            ],
+            "display": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }
+            ],
+            "label": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "600"
+              }
+            ],
+            "reader-body": [
+              "18px",
+              {
+                "lineHeight": "28.8px",
+                "fontWeight": "400"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 24px;
+      line-height: 1;
+    }
+    body {
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary min-h-screen flex justify-center items-start antialiased selection:bg-accent-tint selection:text-primary">
+<!-- Mobile Frame Container (iPhone safe boundaries 393 x 852 min-h) -->
+<div class="relative w-full max-w-[393px] min-h-[852px] bg-background flex flex-col justify-between overflow-x-hidden pb-24 shadow-2xl">
+<!-- Top App Bar & Header Area -->
+<header class="w-full bg-surface z-40 sticky top-0 shadow-sm border-b border-border-hairline">
+<!-- Status Bar Buffer -->
+<div class="h-10 w-full flex items-center justify-between px-6 pt-2">
+<span class="font-label text-caption text-text-secondary font-semibold">9:41</span>
+<div class="flex items-center space-x-1.5 text-text-secondary">
+<span class="material-symbols-outlined" style="font-size: 16px;">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined" style="font-size: 16px;">wifi</span>
+<span class="material-symbols-outlined" style="font-size: 18px;">battery_full</span>
+</div>
+</div>
+<!-- Shared Component: TopAppBar Execution -->
+<div class="flex justify-between items-center w-full px-5 py-2.5">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary" data-icon="menu_book">menu_book</span>
+<h1 class="font-display text-title font-bold text-primary tracking-tight">Inkwell</h1>
+</div>
+<div class="flex items-center space-x-1">
+<button class="w-9 h-9 rounded-full flex items-center justify-center text-text-secondary hover:text-primary hover:opacity-80 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="w-9 h-9 rounded-full flex items-center justify-center text-text-secondary hover:text-primary hover:opacity-80 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-5 pt-5 pb-6 flex flex-col justify-start">
+<!-- Page Heading & Actions -->
+<div class="flex items-baseline justify-between mb-4">
+<h2 class="font-display text-display text-text-primary tracking-tight">Library</h2>
+<span class="font-caption text-caption text-text-tertiary">0 titles</span>
+</div>
+<!-- Segmented Filter Control -->
+<div class="flex items-center p-1 bg-surface-alt rounded-full mb-6 border border-border-hairline/60">
+<button class="flex-1 py-1.5 px-3 rounded-full bg-primary text-on-primary font-label text-caption transition-all shadow-sm">
+          All
+        </button>
+<button class="flex-1 py-1.5 px-3 rounded-full text-text-secondary hover:text-text-primary font-label text-caption transition-all">
+          Ebooks
+        </button>
+<button class="flex-1 py-1.5 px-3 rounded-full text-text-secondary hover:text-text-primary font-label text-caption transition-all">
+          Audiobooks
+        </button>
+</div>
+<!-- Focal Centered Empty State Card -->
+<div class="w-full bg-surface rounded-[20px] p-5 shadow-[0_1px_2px_rgba(31,12,17,0.04),0_8px_24px_rgba(31,12,17,0.06)] border border-border-hairline/80 flex flex-col items-center text-center">
+<!-- Cosy Reading Nook Authentic Photography -->
+<div class="w-full aspect-[4/3] rounded-[20px] overflow-hidden mb-5 shadow-sm relative group bg-surface-container-high">
+<img alt="A sunlit, cozy reading corner with a comfortable beige armchair, warm knitted blush blanket, and wooden side table" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKjW-1p5uvHifTB85NZcRX7dzitJuZ-ehxD_wYPMv5_9TRFmSXCxqaNVENPjsWAETJ3dsxq9waRwgZzDfBwUa-7EtSuGChbVgUiDuxty4SxzOGJG2QErqscU4oWvDP4gdqOkSpkPJFxhYs0CA7U5uL3OrJGZsQR0fJX5cxLQE3cdNMW6ynMatXz1I8HoNnKrWRvrGsVXpjc7Lk7VtNumXRaScZvUkIitGkkEQDlIkngcTVum9ZUKsh1YpaYN9rNAHbVSJTcFYDLA8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-text-primary/10 via-transparent to-transparent pointer-events-none"></div>
+</div>
+<!-- Empty State Typography -->
+<h3 class="font-display text-title font-bold text-text-primary mb-2 tracking-tight">
+          Nothing on your shelf yet
+        </h3>
+<p class="font-body text-body text-text-secondary max-w-[270px] mb-6 leading-relaxed">
+          Books and audiobooks you start or save will live here, ready offline too.
+        </p>
+<!-- Primary CTA Button -->
+<a class="w-full py-3.5 px-6 rounded-full bg-primary text-on-primary font-label text-body font-semibold text-center shadow-md active:bg-accent-pressed active:scale-[0.98] transition-all flex items-center justify-center space-x-2" href="#explore">
+<span>Explore new releases</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<!-- Secondary Text Link -->
+<a class="mt-3.5 py-1 px-3 text-primary font-label text-label font-semibold hover:opacity-80 active:scale-95 transition-all inline-block underline decoration-primary/40 underline-offset-4" href="#free">
+          See free titles
+        </a>
+</div>
+<!-- Australian Editorial Teaser Bar -->
+<div class="mt-5 p-3.5 bg-surface-alt/70 rounded-[16px] border border-border-hairline flex items-center justify-between">
+<div class="flex items-center space-x-2.5">
+<div class="w-8 h-8 rounded-full bg-accent-tint flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+</div>
+<div>
+<p class="font-label text-caption font-semibold text-text-primary">Curated Australian Voices</p>
+<p class="font-caption text-caption text-text-tertiary">New releases this Autumn</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-tertiary text-[20px]">chevron_right</span>
+</div>
+</main>
+<!-- Shared Component: BottomNavBar Execution -->
+<!-- Matches JSON specification with Library tab active -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pt-2 pb-6 max-w-[393px] mx-auto bg-surface border-t border-border-hairline shadow-[0_-4px_16px_rgba(31,12,17,0.04)]">
+<!-- Destination 1: Today -->
+<a class="flex flex-col items-center justify-center text-text-tertiary px-4 py-1.5 hover:text-primary transition-colors active:scale-95" href="#today">
+<span class="material-symbols-outlined" data-icon="wb_sunny">wb_sunny</span>
+<span class="font-label text-caption mt-0.5">Today</span>
+</a>
+<!-- Destination 2: Library (ACTIVE STATE) -->
+<a class="flex flex-col items-center justify-center bg-accent-tint text-primary rounded-full px-4 py-1.5 transition-all active:scale-95 shadow-xs" href="#library">
+<span class="material-symbols-outlined" data-icon="auto_stories" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+<span class="font-label text-caption font-bold mt-0.5">Library</span>
+</a>
+<!-- Destination 3: Search -->
+<a class="flex flex-col items-center justify-center text-text-tertiary px-4 py-1.5 hover:text-primary transition-colors active:scale-95" href="#search">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-label text-caption mt-0.5">Search</span>
+</a>
+<!-- Destination 4: Profile -->
+<a class="flex flex-col items-center justify-center text-text-tertiary px-4 py-1.5 hover:text-primary transition-colors active:scale-95" href="#profile">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label text-caption mt-0.5">Profile</span>
+</a>
+</nav>
+</div>
+</body></html>

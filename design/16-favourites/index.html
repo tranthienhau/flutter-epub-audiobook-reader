@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Favourites - Inkwell</title>
+<!-- Google Fonts: Baloo 2 and M PLUS Rounded 1c -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&amp;family=M+PLUS+Rounded+1c:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration Token Injection -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "reader-paper": "#FBF6EE",
+            "on-tertiary-fixed-variant": "#00531a",
+            "support-strong": "#72A21F",
+            "surface-container-highest": "#f2dde0",
+            "on-tertiary-container": "#004112",
+            "on-error-container": "#93000a",
+            "on-primary-fixed": "#3f0019",
+            "success-text": "#0E7C3A",
+            "error": "#ba1a1a",
+            "on-secondary": "#ffffff",
+            "inverse-primary": "#ffb1c2",
+            "surface-bright": "#fff8f7",
+            "on-tertiary-fixed": "#002106",
+            "support": "#B6E36A",
+            "primary-container": "#fb7299",
+            "on-primary-fixed-variant": "#881741",
+            "text-secondary": "#5C454C",
+            "surface-variant": "#f2dde0",
+            "tertiary-fixed-dim": "#6fdd7a",
+            "on-secondary-fixed-variant": "#7f2544",
+            "surface-container-high": "#f8e3e6",
+            "on-primary": "#ffffff",
+            "surface-container-low": "#fff0f2",
+            "on-surface-variant": "#564145",
+            "on-background": "#24191b",
+            "error-container": "#ffdad6",
+            "primary-fixed": "#ffd9e0",
+            "secondary": "#9d3c5b",
+            "primary": "#a83159",
+            "accent-pressed": "#A14862",
+            "secondary-fixed": "#ffd9e0",
+            "primary-fixed-dim": "#ffb1c2",
+            "inverse-surface": "#3a2d30",
+            "accent-tint": "#FEE6ED",
+            "tertiary-fixed": "#8bfb93",
+            "inverse-on-surface": "#ffecef",
+            "outline-variant": "#ddbfc4",
+            "secondary-container": "#ff8aaa",
+            "secondary-fixed-dim": "#ffb1c4",
+            "surface-container": "#fee9ec",
+            "on-surface": "#24191b",
+            "background": "#FCF4F6",
+            "surface-dim": "#ead5d8",
+            "on-primary-container": "#710032",
+            "on-tertiary": "#ffffff",
+            "surface-tint": "#a83159",
+            "surface-container-lowest": "#ffffff",
+            "surface": "#FFFFFF",
+            "tertiary-container": "#46b557",
+            "danger-text": "#CE2020",
+            "control-border": "#B7898E",
+            "text-primary": "#1F0C11",
+            "outline": "#897175",
+            "border-hairline": "#EFDDE2",
+            "success-bg": "#E3F4E9",
+            "on-secondary-container": "#781f3f",
+            "danger-bg": "#FBE5E5",
+            "warning-bg": "#FAEFE1",
+            "warning-text": "#A75906",
+            "surface-alt": "#F8EDF0",
+            "tertiary": "#006e25",
+            "text-tertiary": "#806A70",
+            "on-error": "#ffffff",
+            "on-secondary-fixed": "#3f001a"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-2xl": "2rem",
+            "space-md": "0.75rem",
+            "space-xs": "0.25rem",
+            "gutter": "1rem",
+            "margin": "1.25rem",
+            "space-lg": "1rem"
+          },
+          "fontFamily": {
+            "display": ["\"Baloo 2\""],
+            "title": ["\"M PLUS Rounded 1c\""],
+            "label": ["\"M PLUS Rounded 1c\""],
+            "caption": ["\"M PLUS Rounded 1c\""],
+            "body": ["\"M PLUS Rounded 1c\""],
+            "reader-body": ["\"M PLUS Rounded 1c\""]
+          },
+          "fontSize": {
+            "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "reader-body": ["18px", { "lineHeight": "28.8px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Custom inkwell book elevation shadows */
+    .inkwell-card-shadow {
+      box-shadow: 0 1px 2px rgba(31, 12, 17, 0.04), 0 8px 24px rgba(31, 12, 17, 0.06);
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.filled {
+      font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+    }
+    /* Hide scrollbar for category pills scroll */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary antialiased min-h-screen flex justify-center selection:bg-accent-tint selection:text-primary">
+<!-- Mobile Viewport Container (iPhone 393 x 852 ratio) -->
+<div class="relative w-full max-w-[393px] min-h-[852px] bg-background flex flex-col shadow-2xl overflow-hidden pb-[96px]">
+<!-- Status Bar Spacer (Safe Area Top: ~54px) -->
+<div class="w-full h-[50px] shrink-0 flex items-center justify-between px-7 pt-3 text-text-primary">
+<span class="font-body text-[14px] font-bold tracking-tight">9:41</span>
+<div class="flex items-center space-x-1.5 text-text-primary">
+<span class="material-symbols-outlined text-[17px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[17px]">wifi</span>
+<span class="material-symbols-outlined text-[20px]">battery_full</span>
+</div>
+</div>
+<!-- Top Navigation Header -->
+<header class="px-5 pt-2 pb-3 shrink-0">
+<!-- Back Chevron & Subtitle Row -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<button aria-label="Go back" class="w-10 h-10 rounded-full bg-surface border border-border-hairline flex items-center justify-center text-text-primary hover:bg-accent-tint hover:text-primary active:scale-95 transition-all duration-150 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">chevron_left</span>
+</button>
+<div>
+<h1 class="font-display text-[32px] leading-[36px] font-bold tracking-tight text-text-primary">
+              Favourites
+            </h1>
+<p class="font-label text-caption text-text-secondary mt-0.5 font-medium">
+              16 saved
+            </p>
+</div>
+</div>
+<!-- Secondary action icon -->
+<button aria-label="Search within favourites" class="w-10 h-10 rounded-full bg-surface border border-border-hairline flex items-center justify-center text-text-secondary hover:text-primary active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+<!-- Filter Chips Row (Horizontally scrollable/spaced) -->
+<div class="flex items-center gap-2 mt-4 overflow-x-auto no-scrollbar py-1">
+<!-- Selected: Books 8 -->
+<button class="shrink-0 px-4 py-1.5 rounded-full bg-primary text-surface font-title text-[13px] font-bold shadow-sm flex items-center gap-1.5 active:scale-95 transition-transform duration-150">
+<span>Books</span>
+<span class="text-[12px] bg-white/20 px-1.5 py-0.2 rounded-full">8</span>
+</button>
+<!-- Unselected: Daily 5 -->
+<button class="shrink-0 px-4 py-1.5 rounded-full bg-accent-tint text-primary font-title text-[13px] font-bold hover:bg-accent-tint/80 active:scale-95 transition-transform duration-150">
+<span>Daily</span>
+<span class="text-[12px] opacity-75">5</span>
+</button>
+<!-- Unselected: Reference 3 -->
+<button class="shrink-0 px-4 py-1.5 rounded-full bg-accent-tint text-primary font-title text-[13px] font-bold hover:bg-accent-tint/80 active:scale-95 transition-transform duration-150">
+<span>Reference</span>
+<span class="text-[12px] opacity-75">3</span>
+</button>
+</div>
+</header>
+<!-- FOCAL List of 5 Saved Cards -->
+<main class="flex-1 px-5 pt-1 space-y-3.5 overflow-y-auto no-scrollbar">
+<!-- ITEM 1: eBook - Paper Trails -->
+<article class="bg-surface rounded-[20px] inkwell-card-shadow p-3.5 flex items-center gap-3.5 transition-transform active:scale-[0.99] border border-border-hairline/40">
+<!-- Cover Thumbnail -->
+<div class="relative w-[68px] h-[88px] rounded-[10px] overflow-hidden shrink-0 shadow-sm bg-surface-alt">
+<img alt="Bundle of vintage handwritten letters tied with rustic natural twine" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZFSWeGXuWO-EFdyxlbzErgVu6_SkuSINtQDo48ypjNzsCG1aSxwwf6eJFrELtiCLYq5fBtC0bU-8glrCIYyg2nYt33XFMAmKzGkIJ2XeVYqq6FhDd4547h-BgenAGZzFB969bfwo2SLIMrATCggQGoim6D9A7lIsizJXH9VamMsuQS7f2bp6hqF55UnkgDO471GVH3hhf064q-bRxSN4guWRrONc4kNmpPTjiVeTcybTyjys-4IXVYzprSyTLcO6kSANF_yOPuus"/>
+</div>
+<!-- Content Details -->
+<div class="flex-1 min-w-0 pr-1">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-label font-bold bg-accent-tint text-primary leading-tight tracking-wide">
+              eBook
+            </span>
+</div>
+<h2 class="font-display text-[16px] leading-[22px] font-bold text-text-primary truncate">
+            Paper Trails
+          </h2>
+<p class="font-body text-[13px] text-text-secondary truncate mt-0.5">
+            Clare Whitfield • 280 pages
+          </p>
+<div class="flex items-center gap-2 mt-2">
+<span class="inline-flex items-center text-[11px] font-label text-support-strong bg-success-bg px-2 py-0.5 rounded-full font-semibold">
+              84% read
+            </span>
+</div>
+</div>
+<!-- Action: Filled Heart -->
+<button aria-label="Remove from favourites" class="w-10 h-10 rounded-full flex items-center justify-center text-primary-container hover:scale-110 active:scale-90 transition-transform shrink-0">
+<span class="material-symbols-outlined text-[24px] filled" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</article>
+<!-- ITEM 2: Audiobook - Harbour Lights -->
+<article class="bg-surface rounded-[20px] inkwell-card-shadow p-3.5 flex items-center gap-3.5 transition-transform active:scale-[0.99] border border-border-hairline/40">
+<!-- Cover Thumbnail -->
+<div class="relative w-[68px] h-[88px] rounded-[10px] overflow-hidden shrink-0 shadow-sm bg-surface-alt">
+<img alt="Harbour Lights audiobook cover with Sydney Harbour at night" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrChcyKu7PrT6PyPQhng-O8dNhFtunXDXNzLiwEow6_7KKePUtcf7zQ6O3V3MqUdGwL4eqOk_j_rxb7AJpjS6Hn9Tb3mPtSFOAxcD_T-2lv6nwURev9eggW5Kuizpx_Ev_Uj-VGYHIi9bI1_HvShs9mqAg-Olhoaupkwm_4xJgkJvvD8TMCOOSfFt_NWnLoaj3nDF8WniWovg_umgqfhz6kAdJVGXLwPl9N47XA_azWVbEanwPG2vDLCR0Y"/>
+<div class="absolute bottom-1 right-1 w-5 h-5 rounded-full bg-surface/90 flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[13px]">headphones</span>
+</div>
+</div>
+<!-- Content Details -->
+<div class="flex-1 min-w-0 pr-1">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-label font-bold bg-accent-tint text-primary leading-tight tracking-wide">
+<span class="material-symbols-outlined text-[12px]">headphones</span>
+<span>Audiobook</span>
+</span>
+</div>
+<h2 class="font-display text-[16px] leading-[22px] font-bold text-text-primary truncate">
+            Harbour Lights
+          </h2>
+<p class="font-body text-[13px] text-text-secondary truncate mt-0.5">
+            Jonah Reid • 9h 05m
+          </p>
+<div class="flex items-center gap-2 mt-2">
+<span class="inline-flex items-center text-[11px] font-label text-text-tertiary">
+<span class="material-symbols-outlined text-[14px] mr-1 text-primary">play_arrow</span>
+              Ch. 4 remaining
+            </span>
+</div>
+</div>
+<!-- Action: Filled Heart -->
+<button aria-label="Remove from favourites" class="w-10 h-10 rounded-full flex items-center justify-center text-primary-container hover:scale-110 active:scale-90 transition-transform shrink-0">
+<span class="material-symbols-outlined text-[24px] filled" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</article>
+<!-- ITEM 3: Daily Essay - Why we still write letters -->
+<article class="bg-surface rounded-[20px] inkwell-card-shadow p-3.5 flex items-center gap-3.5 transition-transform active:scale-[0.99] border border-border-hairline/40">
+<!-- Cover Thumbnail (Square ratio for Daily) -->
+<div class="relative w-[68px] h-[68px] rounded-[10px] overflow-hidden shrink-0 shadow-sm bg-surface-alt">
+<img alt="Blue Mountains mist at dawn with warm sunrise glow" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrAXWLAwee2hqsrXx0Jn91euAjgWqIZBwoGYABV_NvaHnzEBIqUQoe49TErFPVg3vJiOklUlPQJKYqGi8k30acjf9Lo5DdGqvhit5vLdVUOTw-mQx2wRMNU_g-0kjdsBOq58YiAykL6Sz-kSO0nS1jTHmyymIPOta9wfcj49XC938pJhza_5jwXuns5DaZI3vu5k04TomgtuWEs-0UPCWRUh9d-zmCJ9U52HRgYQncly--LoLb1iOsm2qwk"/>
+</div>
+<!-- Content Details -->
+<div class="flex-1 min-w-0 pr-1">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-label font-bold bg-accent-tint text-primary leading-tight tracking-wide">
+              Daily Essay
+            </span>
+</div>
+<h2 class="font-display text-[16px] leading-[22px] font-bold text-text-primary truncate">
+            Why we still write letters
+          </h2>
+<p class="font-body text-[13px] text-text-secondary truncate mt-0.5">
+            Clare Whitfield • 6 min read
+          </p>
+</div>
+<!-- Action: Filled Heart -->
+<button aria-label="Remove from favourites" class="w-10 h-10 rounded-full flex items-center justify-center text-primary-container hover:scale-110 active:scale-90 transition-transform shrink-0">
+<span class="material-symbols-outlined text-[24px] filled" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</article>
+<!-- ITEM 4: Reference - Eureka Stockade -->
+<article class="bg-surface rounded-[20px] inkwell-card-shadow p-3.5 flex items-center gap-3.5 transition-transform active:scale-[0.99] border border-border-hairline/40">
+<!-- Cover Thumbnail (Square ratio for Reference) -->
+<div class="relative w-[68px] h-[68px] rounded-[10px] overflow-hidden shrink-0 shadow-sm bg-surface-alt">
+<img alt="Historic Eureka Stockade flag replica flying on wooden pole" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEj6nezfEksLOcchYm67wf7IPhDngOczp7uvDOiGsZSUvGSyps_aQ9tdXAQwiCoVUGaJH0f6X23SsiQW_gxUU-CxYM8HWwvdUHbONaO9yg_ORORmLUHRMOgVQYwI6-cY0xzWv5kbB4MeUOvnb3pa6gYU1-zIm42lyzUYIQniS1zVSkn8s_7v4bDaAFpS-0JROcYUrRG6Un728cGPiyOO_72NsQVgkGSPnFJEFjtYmO4gVzYZT_mtL-tj4SrL16agJui_Qp-z146zM"/>
+</div>
+<!-- Content Details -->
+<div class="flex-1 min-w-0 pr-1">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-label font-bold bg-[#EBF6D7] text-[#3B5A0C] leading-tight tracking-wide">
+              Reference
+            </span>
+</div>
+<h2 class="font-display text-[16px] leading-[22px] font-bold text-text-primary truncate">
+            Eureka Stockade
+          </h2>
+<p class="font-body text-[13px] text-text-secondary truncate mt-0.5">
+            Ballarat 1854 • Historical Context
+          </p>
+</div>
+<!-- Action: Filled Heart -->
+<button aria-label="Remove from favourites" class="w-10 h-10 rounded-full flex items-center justify-center text-primary-container hover:scale-110 active:scale-90 transition-transform shrink-0">
+<span class="material-symbols-outlined text-[24px] filled" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</article>
+<!-- ITEM 5: eBook - Notes from Hobart -->
+<article class="bg-surface rounded-[20px] inkwell-card-shadow p-3.5 flex items-center gap-3.5 transition-transform active:scale-[0.99] border border-border-hairline/40">
+<!-- Cover Thumbnail -->
+<div class="relative w-[68px] h-[88px] rounded-[10px] overflow-hidden shrink-0 shadow-sm bg-surface-alt">
+<img alt="Book cover for Notes from Hobart featuring Hobart waterfront at sunset" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrBIXAcJ_65UN1e_WHU23stfioIcFvXErfLfQmIlAi8jmN7FdEItBV82696rWrII2hk8uBASi63CxQ3C_Ci5xNS2mmCGU9nrbeuYa6o2IeGVImBwtKSc3kcuVOgLxVQrZM6wa7Lgqqws2YDZ5OGe0Lik80hxaP5E99JfUz3p9-ThQGmuqnXEhkoO3AW2yYtQWXLsHA8SIM_Gqj0LrDqMGTMts1XNwZZOOwqUyexhtOSOIFSxBSc6PbNLSQ"/>
+</div>
+<!-- Content Details -->
+<div class="flex-1 min-w-0 pr-1">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-label font-bold bg-accent-tint text-primary leading-tight tracking-wide">
+              eBook
+            </span>
+</div>
+<h2 class="font-display text-[16px] leading-[22px] font-bold text-text-primary truncate">
+            Notes from Hobart
+          </h2>
+<p class="font-body text-[13px] text-text-secondary truncate mt-0.5">
+            Ruth Lim • 216 pages
+          </p>
+<div class="flex items-center gap-2 mt-2">
+<span class="inline-flex items-center text-[11px] font-label text-text-tertiary">
+<span class="material-symbols-outlined text-[13px] mr-1">check_circle</span>
+              Downloaded
+            </span>
+</div>
+</div>
+<!-- Action: Filled Heart -->
+<button aria-label="Remove from favourites" class="w-10 h-10 rounded-full flex items-center justify-center text-primary-container hover:scale-110 active:scale-90 transition-transform shrink-0">
+<span class="material-symbols-outlined text-[24px] filled" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</article>
+<div class="h-6"></div>
+</main>
+<!-- Bottom Navigation Bar (Mandatory Shared Component with Exact Labels & Icons) -->
+<!-- Docked full-width bottom-0, flat white background (#FFFFFF) with hairline border-t (#EFDDE2) -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-[393px] mx-auto bg-surface border-t border-border-hairline z-50 px-4 pt-2 pb-8 shadow-[0_-4px_16px_rgba(31,12,17,0.04)]">
+<div class="flex justify-around items-center w-full">
+<!-- 1. Today (sun icon) -->
+<button class="flex flex-col items-center justify-center text-text-tertiary px-3 py-1.5 hover:text-primary transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined text-[22px]">wb_sunny</span>
+<span class="font-label text-[11px] font-semibold mt-0.5">Today</span>
+</button>
+<!-- 2. Library (book-open icon) -->
+<button class="flex flex-col items-center justify-center text-text-tertiary px-3 py-1.5 hover:text-primary transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined text-[22px]">auto_stories</span>
+<span class="font-label text-[11px] font-semibold mt-0.5">Library</span>
+</button>
+<!-- 3. Search (search icon) -->
+<button class="flex flex-col items-center justify-center text-text-tertiary px-3 py-1.5 hover:text-primary transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined text-[22px]">search</span>
+<span class="font-label text-[11px] font-semibold mt-0.5">Search</span>
+</button>
+<!-- 4. Profile (person icon) -> ACTIVE TAB as Favourites resides under user's profile/account -->
+<button class="flex flex-col items-center justify-center bg-accent-tint text-primary rounded-full px-4 py-1.5 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-[22px] filled" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label text-[11px] font-bold mt-0.5">Profile</span>
+</button>
+</div>
+<!-- iOS Home Indicator Indicator -->
+<div class="w-32 h-1 bg-on-surface/20 rounded-full mx-auto mt-2"></div>
+</nav>
+</div>
+</body></html>

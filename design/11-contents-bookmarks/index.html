@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Inkwell - Contents and Bookmarks</title>
+<!-- Google Fonts: Baloo 2 and M PLUS Rounded 1c -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&amp;family=M+PLUS+Rounded+1c:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Design System Tailwind Configuration -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-background": "#24191b",
+            "on-tertiary-container": "#004112",
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed-variant": "#00531a",
+            "tertiary": "#006e25",
+            "reader-paper": "#FBF6EE",
+            "surface-container-lowest": "#ffffff",
+            "success-bg": "#E3F4E9",
+            "on-error": "#ffffff",
+            "secondary-fixed": "#ffd9e0",
+            "surface": "#FFFFFF",
+            "on-tertiary-fixed": "#002106",
+            "primary": "#a83159",
+            "primary-container": "#fb7299",
+            "inverse-on-surface": "#ffecef",
+            "text-tertiary": "#806A70",
+            "surface-container": "#fee9ec",
+            "background": "#FCF4F6",
+            "error-container": "#ffdad6",
+            "secondary": "#9d3c5b",
+            "on-primary": "#ffffff",
+            "warning-bg": "#FAEFE1",
+            "surface-dim": "#ead5d8",
+            "primary-fixed-dim": "#ffb1c2",
+            "warning-text": "#A75906",
+            "tertiary-container": "#46b557",
+            "support": "#B6E36A",
+            "success-text": "#0E7C3A",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed": "#8bfb93",
+            "text-secondary": "#5C454C",
+            "surface-tint": "#a83159",
+            "on-primary-fixed-variant": "#881741",
+            "outline": "#897175",
+            "on-error-container": "#93000a",
+            "surface-variant": "#f2dde0",
+            "support-strong": "#72A21F",
+            "outline-variant": "#ddbfc4",
+            "on-secondary-container": "#781f3f",
+            "primary-fixed": "#ffd9e0",
+            "surface-container-highest": "#f2dde0",
+            "text-primary": "#1F0C11",
+            "accent-pressed": "#A14862",
+            "on-primary-fixed": "#3f0019",
+            "on-primary-container": "#710032",
+            "border-hairline": "#EFDDE2",
+            "surface-bright": "#fff8f7",
+            "danger-bg": "#FBE5E5",
+            "danger-text": "#CE2020",
+            "secondary-fixed-dim": "#ffb1c4",
+            "inverse-surface": "#3a2d30",
+            "secondary-container": "#ff8aaa",
+            "on-surface-variant": "#564145",
+            "accent-tint": "#FEE6ED",
+            "control-border": "#B7898E",
+            "error": "#ba1a1a",
+            "surface-alt": "#F8EDF0",
+            "tertiary-fixed-dim": "#6fdd7a",
+            "on-secondary-fixed": "#3f001a",
+            "inverse-primary": "#ffb1c2",
+            "surface-container-high": "#f8e3e6",
+            "on-surface": "#24191b",
+            "on-secondary-fixed-variant": "#7f2544",
+            "surface-container-low": "#fff0f2"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "space-lg": "1rem",
+            "space-xl": "1.5rem",
+            "gutter": "1rem",
+            "space-md": "0.75rem",
+            "space-2xl": "2rem",
+            "space-sm": "0.5rem",
+            "margin": "1.25rem"
+          },
+          "fontFamily": {
+            "reader-body": [
+              "\"M PLUS Rounded 1c\""
+            ],
+            "caption": [
+              "\"M PLUS Rounded 1c\""
+            ],
+            "body": [
+              "\"M PLUS Rounded 1c\""
+            ],
+            "display": [
+              "\"Baloo 2\""
+            ],
+            "title": [
+              "\"M PLUS Rounded 1c\""
+            ],
+            "label": [
+              "\"M PLUS Rounded 1c\""
+            ]
+          },
+          "fontSize": {
+            "reader-body": [
+              "18px",
+              {
+                "lineHeight": "28.8px",
+                "fontWeight": "400"
+              }
+            ],
+            "caption": [
+              "13px",
+              {
+                "lineHeight": "18px",
+                "fontWeight": "500"
+              }
+            ],
+            "body": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "400"
+              }
+            ],
+            "display": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }
+            ],
+            "title": [
+              "20px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "700"
+              }
+            ],
+            "label": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "600"
+              }
+            ]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.fill-icon {
+      font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex justify-center items-start antialiased selection:bg-accent-tint selection:text-primary">
+<!-- Mobile Viewport Wrapper (393px width, safe frame representation) -->
+<main class="w-full max-w-[393px] min-h-[852px] bg-background flex flex-col relative pb-10 shadow-2xl mx-auto overflow-x-hidden">
+<!-- 1. iOS Status Bar -->
+<header class="w-full pt-3 px-7 flex justify-between items-center select-none text-text-primary z-20">
+<span class="font-label text-[15px] font-bold tracking-tight">9:41</span>
+<div class="flex items-center space-x-2 text-text-primary">
+<span class="material-symbols-outlined text-[17px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[17px]">wifi</span>
+<span class="material-symbols-outlined text-[20px]">battery_full</span>
+</div>
+</header>
+<!-- Top Navigation / Context Header with Book Thumbnail -->
+<section class="px-5 pt-3 pb-3 flex items-center justify-between border-b border-border-hairline/60 bg-background/95 backdrop-blur-md sticky top-0 z-30">
+<!-- Close Circle Button -->
+<div class="flex items-center gap-3">
+<button aria-label="Close" class="w-10 h-10 rounded-full bg-surface shadow-sm border border-border-hairline flex items-center justify-center text-text-primary hover:bg-surface-alt active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+<!-- Book Info Thumbnail & Details -->
+<div class="flex items-center gap-3 pl-1">
+<div class="relative w-[42px] h-[58px] rounded-[8px] overflow-hidden shadow-[0_2px_8px_rgba(31,12,17,0.12)] shrink-0 border border-border-hairline/80 bg-surface">
+<img alt="Cover of The Salt Road by Eleanor Marsh" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrDgtPIMsW3dhML8nyV6brsKZ3sMBm--H24X7M5D7VA14El7oRIOuz9O0ridIyFfADGO7nKXaM6Pd86Dzj8mMdTcHZC-VJL3XsbAEuKLqt_fipWkV8t_aQ9Kf1SHTjgCuUk1MuuSoDzK5jNMU0pHL8kFyt5ctuubYb1EW_ZQ5DILA78xlPlOzdzM17WojPSLlNfmn0syOHBXoyr1rmWmvuMLUDuxyCcXmLws7qqeqY1mwwvVckJX5Gd3L5o"/>
+</div>
+<div class="flex flex-col">
+<h1 class="font-display text-[17px] leading-tight font-bold text-text-primary tracking-tight">The Salt Road</h1>
+<p class="font-caption text-[13px] text-text-tertiary font-medium mt-0.5">42% · Chapter 7</p>
+</div>
+</div>
+</div>
+<!-- Action: Audiobook Mode Shortcut -->
+<button aria-label="Audiobook Companion" class="w-10 h-10 rounded-full flex items-center justify-center text-text-tertiary hover:text-primary active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[22px]">headphones</span>
+</button>
+</section>
+<!-- 2. Underline Navigation Tabs -->
+<nav aria-label="Book navigation sections" class="w-full px-5 pt-2 bg-background border-b border-border-hairline">
+<div class="flex items-center justify-around">
+<!-- Tab 1: Contents -->
+<button class="group relative pb-3 pt-2 font-label text-[15px] font-medium text-text-tertiary hover:text-text-primary transition-colors" type="button">
+<span>Contents</span>
+</button>
+<!-- Tab 2: Bookmarks (Active) -->
+<button aria-current="page" class="group relative pb-3 pt-2 font-label text-[15px] font-bold text-primary transition-colors" type="button">
+<span>Bookmarks</span>
+<!-- Active underline indicator -->
+<span class="absolute bottom-0 left-0 w-full h-[3px] bg-primary rounded-full"></span>
+</button>
+<!-- Tab 3: Highlights -->
+<button class="group relative pb-3 pt-2 font-label text-[15px] font-medium text-text-tertiary hover:text-text-primary transition-colors flex items-center gap-1" type="button">
+<span>Highlights</span>
+<span class="text-[12px] font-semibold text-text-tertiary">(6)</span>
+</button>
+</div>
+</nav>
+<!-- 3. Bookmarks Focal Canvas -->
+<div class="px-5 pt-5 pb-6 flex-1 flex flex-col space-y-4">
+<!-- Subheader: Count & Sort Filter -->
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label text-caption text-text-tertiary font-bold tracking-wide">SAVED BOOKMARKS</span>
+<span class="inline-flex items-center justify-center px-2 py-0.5 text-[11px] font-bold bg-accent-tint text-primary rounded-full">4</span>
+</div>
+<button class="flex items-center gap-1 font-caption text-caption text-text-tertiary hover:text-primary transition-colors active:scale-95" type="button">
+<span>Page order</span>
+<span class="material-symbols-outlined text-[16px]">swap_vert</span>
+</button>
+</div>
+<!-- Bookmarks List -->
+<div class="flex flex-col space-y-3.5">
+<!-- Bookmark Card 1: Ch 7 (Today) -->
+<article class="relative bg-surface rounded-[20px] p-4.5 p-4 border border-border-hairline shadow-[0_2px_10px_rgba(31,12,17,0.04)] hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined fill-icon text-primary-container text-[20px]">bookmark</span>
+<h2 class="font-title text-[15px] font-bold text-text-primary leading-tight">Ch 7 · The Long Paddock · p.131</h2>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-alt font-caption text-[12px] font-medium text-text-tertiary">Today</span>
+</div>
+<blockquote class="mt-2.5 pl-3 border-l-2 border-primary-container/60">
+<p class="font-reader-body text-[14px] leading-relaxed italic text-text-secondary">
+              “The paddock ran silver under the moon and the fence wire sang with the first cold gust off the bight.”
+            </p>
+</blockquote>
+<div class="mt-3 pt-2.5 border-t border-border-hairline/60 flex items-center justify-between">
+<span class="font-caption text-[12px] text-text-tertiary">Reading location</span>
+<div class="flex items-center gap-1 text-primary font-label text-[13px] font-bold group cursor-pointer">
+<span>Go to page</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Bookmark Card 2: Ch 5 -->
+<article class="relative bg-surface rounded-[20px] p-4 border border-border-hairline shadow-[0_2px_10px_rgba(31,12,17,0.04)] hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined fill-icon text-primary-container text-[20px]">bookmark</span>
+<h2 class="font-title text-[15px] font-bold text-text-primary leading-tight">Ch 5 · Salt and Iron · p.98</h2>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-alt font-caption text-[12px] font-medium text-text-tertiary">3 Nov</span>
+</div>
+<blockquote class="mt-2.5 pl-3 border-l-2 border-border-hairline">
+<p class="font-reader-body text-[14px] leading-relaxed italic text-text-secondary">
+              “She paused by the iron gate, where rusted wire caught the morning mist like beaten copper.”
+            </p>
+</blockquote>
+<div class="mt-3 pt-2.5 border-t border-border-hairline/60 flex items-center justify-between">
+<span class="font-caption text-[12px] text-text-tertiary">Reading location</span>
+<div class="flex items-center gap-1 text-primary font-label text-[13px] font-bold group cursor-pointer">
+<span>Go to page</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Bookmark Card 3: Ch 3 -->
+<article class="relative bg-surface rounded-[20px] p-4 border border-border-hairline shadow-[0_2px_10px_rgba(31,12,17,0.04)] hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined fill-icon text-primary-container text-[20px]">bookmark</span>
+<h2 class="font-title text-[15px] font-bold text-text-primary leading-tight">Ch 3 · The Coach Road · p.54</h2>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-alt font-caption text-[12px] font-medium text-text-tertiary">28 Oct</span>
+</div>
+<blockquote class="mt-2.5 pl-3 border-l-2 border-border-hairline">
+<p class="font-reader-body text-[14px] leading-relaxed italic text-text-secondary">
+              “The team rattled past the ghost gums at midday, dust rising in amber plumes behind the wheels.”
+            </p>
+</blockquote>
+<div class="mt-3 pt-2.5 border-t border-border-hairline/60 flex items-center justify-between">
+<span class="font-caption text-[12px] text-text-tertiary">Reading location</span>
+<div class="flex items-center gap-1 text-primary font-label text-[13px] font-bold group cursor-pointer">
+<span>Go to page</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Bookmark Card 4: Swiped State revealing "Delete" Action -->
+<div class="relative overflow-hidden rounded-[20px] bg-danger-text shadow-[0_2px_10px_rgba(31,12,17,0.04)]">
+<!-- Hidden Revealed Background Underneath (Red Delete Zone) -->
+<div class="absolute inset-y-0 right-0 w-24 bg-danger-text flex flex-col items-center justify-center text-on-error cursor-pointer hover:bg-opacity-95 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[24px]">delete</span>
+<span class="font-label text-[12px] font-bold mt-1">Delete</span>
+</div>
+<!-- Foreground Card (Translated Left to Demonstrate Gesture State) -->
+<article class="relative bg-surface rounded-[20px] p-4 border border-border-hairline -translate-x-20 transition-transform duration-200">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined fill-icon text-primary-container text-[20px]">bookmark</span>
+<h2 class="font-title text-[15px] font-bold text-text-primary leading-tight">Ch 1 · Port Fairy · p.9</h2>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-alt font-caption text-[12px] font-medium text-text-tertiary">20 Oct</span>
+</div>
+<blockquote class="mt-2.5 pl-3 border-l-2 border-border-hairline">
+<p class="font-reader-body text-[14px] leading-relaxed italic text-text-secondary truncate">
+                “The tide had pulled away from the stone jetty, leaving kelp and salt crust in the crevices.”
+              </p>
+</blockquote>
+<div class="mt-3 pt-2.5 border-t border-border-hairline/60 flex items-center justify-between">
+<span class="font-caption text-[12px] text-text-tertiary">Reading location</span>
+<div class="flex items-center gap-1 text-primary font-label text-[13px] font-bold">
+<span>Go to page</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- Quick Action Tip / Literary Footnote -->
+<div class="pt-4 flex items-center justify-center text-center">
+<p class="font-caption text-[12px] text-text-tertiary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px]">swipe_left</span>
+<span>Swipe left on any bookmark to remove it from this edition</span>
+</p>
+</div>
+</div>
+<!-- Home Indicator (iOS Bar) -->
+<div class="mt-auto w-full pb-3 flex justify-center items-center select-none">
+<div class="w-32 h-1 bg-text-primary/20 rounded-full"></div>
+</div>
+</main>
+</body></html>

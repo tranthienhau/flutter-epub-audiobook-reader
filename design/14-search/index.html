@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Inkwell - Search</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&amp;family=M+PLUS+Rounded+1c:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-container": "#004112",
+            "on-surface": "#24191b",
+            "support": "#B6E36A",
+            "accent-pressed": "#A14862",
+            "outline-variant": "#ddbfc4",
+            "surface": "#FFFFFF",
+            "surface-container-lowest": "#ffffff",
+            "primary-fixed": "#ffd9e0",
+            "text-secondary": "#5C454C",
+            "surface-container-highest": "#f2dde0",
+            "outline": "#897175",
+            "support-strong": "#72A21F",
+            "on-tertiary": "#ffffff",
+            "on-primary-container": "#710032",
+            "warning-bg": "#FAEFE1",
+            "tertiary-fixed-dim": "#6fdd7a",
+            "secondary-container": "#ff8aaa",
+            "on-error": "#ffffff",
+            "success-text": "#0E7C3A",
+            "on-primary-fixed-variant": "#881741",
+            "on-secondary-fixed-variant": "#7f2544",
+            "on-tertiary-fixed": "#002106",
+            "surface-container": "#fee9ec",
+            "reader-paper": "#FBF6EE",
+            "on-secondary-container": "#781f3f",
+            "surface-variant": "#f2dde0",
+            "secondary-fixed-dim": "#ffb1c4",
+            "on-background": "#24191b",
+            "tertiary": "#006e25",
+            "surface-dim": "#ead5d8",
+            "danger-text": "#CE2020",
+            "secondary-fixed": "#ffd9e0",
+            "background": "#FCF4F6",
+            "error-container": "#ffdad6",
+            "inverse-primary": "#ffb1c2",
+            "tertiary-container": "#46b557",
+            "inverse-on-surface": "#ffecef",
+            "control-border": "#B7898E",
+            "on-secondary": "#ffffff",
+            "secondary": "#9d3c5b",
+            "on-primary": "#ffffff",
+            "danger-bg": "#FBE5E5",
+            "surface-tint": "#a83159",
+            "on-error-container": "#93000a",
+            "surface-container-high": "#f8e3e6",
+            "primary-container": "#fb7299",
+            "tertiary-fixed": "#8bfb93",
+            "primary-fixed-dim": "#ffb1c2",
+            "inverse-surface": "#3a2d30",
+            "on-secondary-fixed": "#3f001a",
+            "primary": "#a83159",
+            "accent-tint": "#FEE6ED",
+            "success-bg": "#E3F4E9",
+            "warning-text": "#A75906",
+            "on-surface-variant": "#564145",
+            "surface-container-low": "#fff0f2",
+            "surface-alt": "#F8EDF0",
+            "on-primary-fixed": "#3f0019",
+            "surface-bright": "#fff8f7",
+            "text-primary": "#1F0C11",
+            "border-hairline": "#EFDDE2",
+            "on-tertiary-fixed-variant": "#00531a",
+            "error": "#ba1a1a",
+            "text-tertiary": "#806A70"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "1.25rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "space-md": "0.75rem",
+            "space-lg": "1rem",
+            "space-xl": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-2xl": "2rem"
+          },
+          "fontFamily": {
+            "title": [
+              "\"M PLUS Rounded 1c\""
+            ],
+            "body": [
+              "\"M PLUS Rounded 1c\""
+            ],
+            "label": [
+              "\"M PLUS Rounded 1c\""
+            ],
+            "reader-body": [
+              "\"M PLUS Rounded 1c\""
+            ],
+            "display": [
+              "\"Baloo 2\""
+            ],
+            "caption": [
+              "\"M PLUS Rounded 1c\""
+            ]
+          },
+          "fontSize": {
+            "title": [
+              "20px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "700"
+              }
+            ],
+            "body": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "400"
+              }
+            ],
+            "label": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "600"
+              }
+            ],
+            "reader-body": [
+              "18px",
+              {
+                "lineHeight": "28.8px",
+                "fontWeight": "400"
+              }
+            ],
+            "display": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }
+            ],
+            "caption": [
+              "13px",
+              {
+                "lineHeight": "18px",
+                "fontWeight": "500"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 22px;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .custom-shadow {
+      box-shadow: 0 1px 2px rgba(31,12,17,0.04), 0 8px 24px rgba(31,12,17,0.06);
+    }
+    /* Hide scrollbar for clean horizontal chip scroll */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary antialiased font-body min-h-screen flex justify-center selection:bg-accent-tint selection:text-primary">
+<!-- iPhone Frame Mock Container (393px width constraint) -->
+<div class="relative w-full max-w-[393px] min-h-[852px] bg-background flex flex-col pb-44 shadow-2xl overflow-x-hidden">
+<!-- iOS Status Bar -->
+<div class="w-full pt-3 px-7 flex justify-between items-center text-text-primary select-none z-30">
+<span class="font-bold text-[15px] tracking-tight">9:41</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined !text-[18px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined !text-[18px]">wifi</span>
+<span class="material-symbols-outlined !text-[20px]">battery_full</span>
+</div>
+</div>
+<!-- Top App Bar (Shared Component Style Anchor) -->
+<header class="flex justify-between items-center w-full px-5 py-2.5 max-w-md mx-auto z-20">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-accent-tint flex items-center justify-center text-primary">
+<span class="material-symbols-outlined !text-[20px]" data-icon="menu_book">menu_book</span>
+</div>
+<span class="font-display text-[26px] font-extrabold text-primary tracking-tight">Inkwell</span>
+</div>
+<button aria-label="Audio Library" class="w-9 h-9 rounded-full bg-accent-tint flex items-center justify-center text-primary hover:opacity-80 transition-opacity active:scale-95 duration-150">
+<span class="material-symbols-outlined !text-[20px]" data-icon="headphones">headphones</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="px-5 pt-1 space-y-4">
+<!-- Page Title & Scope Subtitle -->
+<div class="flex items-baseline justify-between pt-1 pb-0.5">
+<h1 class="font-display text-display text-text-primary font-bold">Search</h1>
+<span class="font-caption text-caption text-text-tertiary">3,420 Australian works</span>
+</div>
+<!-- Search Input Field -->
+<div class="relative flex items-center bg-surface border-[1.5px] border-control-border rounded-[12px] px-3.5 py-2.5 shadow-sm focus-within:ring-2 focus-within:ring-primary-container transition-all">
+<span class="material-symbols-outlined text-text-tertiary mr-2.5 select-none" data-icon="search">search</span>
+<input class="w-full bg-transparent p-0 border-none text-text-primary font-body text-body focus:ring-0 focus:outline-none placeholder-text-tertiary" placeholder="Titles, authors, subjects..." type="text" value="gold rush"/>
+<button aria-label="Clear input" class="w-6 h-6 rounded-full flex items-center justify-center text-text-tertiary hover:text-text-primary active:scale-90 transition-transform">
+<span class="material-symbols-outlined !text-[18px]" data-icon="close">close</span>
+</button>
+</div>
+<!-- Filter Chips Row -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5 -mx-5 px-5">
+<button class="rounded-full px-4 py-1.5 bg-primary text-surface font-caption text-caption font-semibold shadow-sm shrink-0 active:scale-95 transition-transform">
+          All
+        </button>
+<button class="rounded-full px-4 py-1.5 bg-accent-tint text-primary font-caption text-caption font-semibold shrink-0 hover:opacity-90 active:scale-95 transition-transform">
+          Ebooks
+        </button>
+<button class="rounded-full px-4 py-1.5 bg-accent-tint text-primary font-caption text-caption font-semibold shrink-0 hover:opacity-90 active:scale-95 transition-transform">
+          Audiobooks
+        </button>
+<button class="rounded-full px-4 py-1.5 bg-accent-tint text-primary font-caption text-caption font-semibold shrink-0 hover:opacity-90 active:scale-95 transition-transform">
+          Daily
+        </button>
+<button class="rounded-full px-4 py-1.5 bg-accent-tint text-primary font-caption text-caption font-semibold shrink-0 hover:opacity-90 active:scale-95 transition-transform">
+          Reference
+        </button>
+</div>
+<!-- Recent Searches Section -->
+<div class="space-y-2 pt-1">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-bold tracking-wider uppercase text-text-tertiary">Recent Searches</span>
+<button class="font-caption text-caption text-primary font-semibold hover:opacity-80 active:scale-95 transition-all">Clear all</button>
+</div>
+<div class="flex flex-wrap gap-2">
+<div class="inline-flex items-center gap-1.5 bg-surface border border-border-hairline rounded-full px-3 py-1 shadow-sm text-text-secondary font-caption text-caption">
+<span class="material-symbols-outlined !text-[15px] text-text-tertiary" data-icon="history">history</span>
+<span>Hobart</span>
+<button aria-label="Remove Hobart" class="text-text-tertiary hover:text-text-primary ml-0.5 leading-none">
+<span class="material-symbols-outlined !text-[14px]">close</span>
+</button>
+</div>
+<div class="inline-flex items-center gap-1.5 bg-surface border border-border-hairline rounded-full px-3 py-1 shadow-sm text-text-secondary font-caption text-caption">
+<span class="material-symbols-outlined !text-[15px] text-text-tertiary" data-icon="history">history</span>
+<span>Eleanor Marsh</span>
+<button aria-label="Remove Eleanor Marsh" class="text-text-tertiary hover:text-text-primary ml-0.5 leading-none">
+<span class="material-symbols-outlined !text-[14px]">close</span>
+</button>
+</div>
+<div class="inline-flex items-center gap-1.5 bg-surface border border-border-hairline rounded-full px-3 py-1 shadow-sm text-text-secondary font-caption text-caption">
+<span class="material-symbols-outlined !text-[15px] text-text-tertiary" data-icon="history">history</span>
+<span>bush poetry</span>
+<button aria-label="Remove bush poetry" class="text-text-tertiary hover:text-text-primary ml-0.5 leading-none">
+<span class="material-symbols-outlined !text-[14px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Focal Result Card: Victorian Gold Rush Reference -->
+<article class="bg-surface rounded-[20px] custom-shadow p-4 space-y-3 border border-border-hairline/60">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1 bg-support text-text-primary font-caption text-caption font-bold px-2.5 py-0.5 rounded-full">
+<span class="material-symbols-outlined !text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            REFERENCE
+          </span>
+<span class="font-caption text-caption text-text-tertiary">Historical Context</span>
+</div>
+<div class="relative w-full aspect-[16/9] rounded-xl overflow-hidden bg-surface-alt">
+<img alt="Gold pan sitting in a rocky Australian stream" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrDF3gOx5xV4S89PuqzzlTI9GSQ8olLR-BXLtFvKgi_IUP0YWtHT5GINoq6zExwOKgjSPqvQbl6lAwDY6uPiGk1yS0ULCdXgZr-BRjwRlIh6ORBhXkGD_5fgEb1VfrUB8xeFSVqT6C9uHQOCWQcQd8GVMiu5A1rPOOUPbrxLv_LLLX_o-lBsnez_3Ai9LhVWvWNBsJnKiWM8Dq0RL-XxTpiP4hcLTKBTZNN-7tNWc9Exk3mZnbBrprDYDaU"/>
+<div class="absolute bottom-2.5 left-2.5 bg-surface/90 backdrop-blur-md px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined !text-[13px] text-primary" data-icon="location_on" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="text-[11px] font-bold text-text-primary">Sovereign Hill, Ballarat</span>
+</div>
+</div>
+<div class="space-y-1">
+<h2 class="font-display text-[19px] font-bold text-text-primary leading-tight">Victorian Gold Rush (1851)</h2>
+<p class="font-body text-label text-text-secondary leading-snug">
+            How the 1850s gold fever transformed Victoria from a pastoral outpost into a global literary and cultural powerhouse.
+          </p>
+</div>
+<div class="pt-1 flex items-center justify-between border-t border-border-hairline/70">
+<a class="font-label text-label font-bold text-primary flex items-center gap-1 hover:underline" href="#">
+            Explore 14 titles &amp; essays <span class="material-symbols-outlined !text-[18px]">arrow_forward</span>
+</a>
+<span class="text-[11px] text-text-tertiary">Curated by SLV</span>
+</div>
+</article>
+<!-- Matches Section -->
+<section class="space-y-3 pt-2">
+<div class="flex items-baseline justify-between">
+<h3 class="font-title text-title text-text-primary font-bold">Matches for “gold rush”</h3>
+<span class="font-caption text-caption text-text-tertiary">3 matches</span>
+</div>
+<!-- Result Item 1: Red Dirt Country -->
+<article class="bg-surface rounded-[20px] p-3.5 flex gap-3.5 items-center custom-shadow border border-border-hairline/40">
+<div class="w-[64px] h-[90px] shrink-0 rounded-[8px] overflow-hidden bg-surface-alt shadow-sm">
+<img alt="Book cover: Red Dirt Country by Sam Okafor" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrDIZukBkiKwNP0XRMJwVyr-iC9-1XygEip-7KYp4b39nrHlCZhjA8dKaH2CHVlkI4lIR2JG6ZV-QJkgpWaUCVCAjdTwG3TtdElQ1Nyu9SdR9IM4q5vMlQ7V9oW0bY289uK7TB608LI0Ujogp5eMuJyxUVbktx5Sy3hxfiVXUcR4OxLRzuckavBQGI_Ojk3lP7kWfTGl2-30knKKy-G8a-TK6smh483_zWQvz1hQFSnbtBXW7c5EQbIq6ac"/>
+</div>
+<div class="flex-1 min-w-0 space-y-1">
+<div class="flex items-center justify-between">
+<span class="bg-accent-tint text-primary font-caption text-[11px] font-bold px-2 py-0.5 rounded-full">eBook</span>
+<span class="text-warning-text font-caption text-caption font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined !text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.8
+              </span>
+</div>
+<h4 class="font-title text-[15px] font-bold text-text-primary truncate">Red Dirt Country</h4>
+<p class="font-caption text-[12px] text-text-secondary truncate">Sam Okafor · 340 pages · Historical Fiction</p>
+<div class="flex items-center justify-between pt-1">
+<span class="bg-success-bg text-success-text text-[11px] font-bold px-2 py-0.5 rounded-full inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-success-text"></span> Available now
+              </span>
+<button aria-label="Bookmark" class="text-text-tertiary hover:text-primary transition-colors">
+<span class="material-symbols-outlined !text-[20px]" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Result Item 2: Ballarat Nights -->
+<article class="bg-surface rounded-[20px] p-3.5 flex gap-3.5 items-center custom-shadow border border-border-hairline/40">
+<div class="w-[64px] h-[90px] shrink-0 rounded-[8px] overflow-hidden bg-surface-alt shadow-sm">
+<img alt="Book cover: Ballarat Nights by Grace Doyle" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrD13g5j6JrLNEtAvA-TiQvCWpDI8CDDLbUUuP15Z38Ay538F6k7k_1pjLANmWo5L2EyqPn2Yk1tcVeHO0uaPlYVMnvuFd51tlZhtQHHjNJV-9l--8_3EmYWF9-vqBG2gdUNTVDe35n_cawtVZX7G-utAZoOGYfWqOwrDZtRAQdHVMmZJrVSrd6Az3wCc5g3GgR8audluKCKGnyqNKeQntTQFB3NYJnwi6O2E1voiWZCOjTCkp7LV9S5lrw"/>
+</div>
+<div class="flex-1 min-w-0 space-y-1">
+<div class="flex items-center justify-between">
+<span class="bg-accent-tint text-primary font-caption text-[11px] font-bold px-2 py-0.5 rounded-full">Audiobook</span>
+<span class="text-warning-text font-caption text-caption font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined !text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.9
+              </span>
+</div>
+<h4 class="font-title text-[15px] font-bold text-text-primary truncate">Ballarat Nights</h4>
+<p class="font-caption text-[12px] text-text-secondary truncate">Grace Doyle · Jack Thompson · 8h 12m</p>
+<div class="flex items-center justify-between pt-1">
+<button class="bg-surface-alt hover:bg-accent-tint text-primary text-[11px] font-bold px-2.5 py-0.5 rounded-full inline-flex items-center gap-1 border border-control-border/40 transition-colors">
+<span class="material-symbols-outlined !text-[14px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span> Sample available
+              </button>
+<button aria-label="Bookmark" class="text-text-tertiary hover:text-primary transition-colors">
+<span class="material-symbols-outlined !text-[20px]" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Result Item 3: The town that gold built -->
+<article class="bg-surface rounded-[20px] p-3.5 flex gap-3.5 items-center custom-shadow border border-border-hairline/40">
+<div class="w-[64px] h-[90px] shrink-0 rounded-[8px] overflow-hidden bg-surface-alt shadow-sm">
+<img alt="Historic Bendigo streetscape with vintage tram" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrAuXh2V1VkU_s5mReoK3Jcf2FPyNNVBfVo7ob06oqCzZNjoWu0XBQ16CBVKiqyy3CCcXATkQwLYxTAdtGxb3hXm1WwB9RYcOLIvh37Xonq2Qi3LJch_k9fPluOCLg6AGiemekSUgYhv1dWMzTkXKqTNm1TifcgeOkEYD25aajs7c7owlYWVqZ_2x1u_aah4hcwnmTdm2Fc-4b0Y2jMW11uVIppPCsAzDhwnN-l64jdbMmjXI0aec0J90aQ"/>
+</div>
+<div class="flex-1 min-w-0 space-y-1">
+<div class="flex items-center justify-between">
+<span class="bg-accent-tint text-primary font-caption text-[11px] font-bold px-2 py-0.5 rounded-full">Daily Essay</span>
+<span class="text-text-tertiary font-caption text-[11px] font-medium flex items-center gap-0.5">
+<span class="material-symbols-outlined !text-[13px]">schedule</span> 5 min read
+              </span>
+</div>
+<h4 class="font-title text-[15px] font-bold text-text-primary truncate">The town that gold built</h4>
+<p class="font-caption text-[12px] text-text-secondary truncate">Clare Whitfield · Bendigo history &amp; art</p>
+<div class="flex items-center justify-between pt-1">
+<span class="bg-surface-container text-on-secondary-container text-[11px] font-bold px-2 py-0.5 rounded-full">
+                Inkwell Original
+              </span>
+<button aria-label="Bookmark" class="text-text-tertiary hover:text-primary transition-colors">
+<span class="material-symbols-outlined !text-[20px]" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+</section>
+</main>
+<!-- Docked Mini Player & Bottom Nav Cluster -->
+<div class="fixed bottom-0 left-0 right-0 max-w-[393px] mx-auto z-40 pointer-events-none">
+<!-- Mini Player Card -->
+<div class="pointer-events-auto mx-3 mb-2 bg-surface rounded-2xl shadow-[0_8px_24px_rgba(31,12,17,0.12)] border border-border-hairline/70 overflow-hidden">
+<!-- Thin Progress Bar along top -->
+<div class="w-full h-[2.5px] bg-surface-alt relative">
+<div class="h-full bg-primary-container w-[65%]"></div>
+</div>
+<div class="p-2.5 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-11 h-11 rounded-lg overflow-hidden shrink-0 shadow-sm bg-surface-alt">
+<img alt="Mini cover: Harbour Lights by Jonah Reid" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrChcyKu7PrT6PyPQhng-O8dNhFtunXDXNzLiwEow6_7KKePUtcf7zQ6O3V3MqUdGwL4eqOk_j_rxb7AJpjS6Hn9Tb3mPtSFOAxcD_T-2lv6nwURev9eggW5Kuizpx_Ev_Uj-VGYHIi9bI1_HvShs9mqAg-Olhoaupkwm_4xJgkJvvD8TMCOOSfFt_NWnLoaj3nDF8WniWovg_umgqfhz6kAdJVGXLwPl9N47XA_azWVbEanwPG2vDLCR0Y"/>
+</div>
+<div class="min-w-0">
+<h5 class="font-title text-[14px] font-bold text-text-primary leading-tight truncate">Harbour Lights</h5>
+<p class="font-caption text-[11px] text-text-tertiary truncate">Ch 12 · 18:42 left · Jonah Reid</p>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button aria-label="Rewind 10 seconds" class="text-text-tertiary hover:text-text-primary active:scale-90 transition-transform p-1">
+<span class="material-symbols-outlined !text-[22px]" data-icon="replay_10">replay_10</span>
+</button>
+<button aria-label="Pause playback" class="w-9 h-9 rounded-full bg-primary text-surface flex items-center justify-center hover:bg-accent-pressed active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined !text-[20px]" data-icon="pause" style="font-variation-settings: 'FILL' 1;">pause</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar (Shared Component Executed) -->
+<nav class="pointer-events-auto bg-surface border-t border-border-hairline shadow-[0_-4px_16px_rgba(31,12,17,0.04)] px-4 pt-1 pb-6 flex justify-around items-center">
+<!-- Tab 1: Today (Inactive) -->
+<a class="flex flex-col items-center justify-center text-text-tertiary px-4 py-1.5 hover:text-primary transition-colors active:scale-95 duration-150" href="#today">
+<span class="material-symbols-outlined !text-[22px]" data-icon="wb_sunny">wb_sunny</span>
+<span class="font-label text-[12px] font-semibold mt-0.5">Today</span>
+</a>
+<!-- Tab 2: Library (Inactive) -->
+<a class="flex flex-col items-center justify-center text-text-tertiary px-4 py-1.5 hover:text-primary transition-colors active:scale-95 duration-150" href="#library">
+<span class="material-symbols-outlined !text-[22px]" data-icon="auto_stories">auto_stories</span>
+<span class="font-label text-[12px] font-semibold mt-0.5">Library</span>
+</a>
+<!-- Tab 3: Search (ACTIVE - Closest match to Search page intent) -->
+<a class="flex flex-col items-center justify-center bg-accent-tint text-primary rounded-full px-4 py-1.5 active:scale-95 duration-150 shadow-xs" href="#search">
+<span class="material-symbols-outlined !text-[22px]" data-icon="search" style="font-variation-settings: 'FILL' 1;">search</span>
+<span class="font-label text-[12px] font-bold mt-0.5">Search</span>
+</a>
+<!-- Tab 4: Profile (Inactive) -->
+<a class="flex flex-col items-center justify-center text-text-tertiary px-4 py-1.5 hover:text-primary transition-colors active:scale-95 duration-150" href="#profile">
+<span class="material-symbols-outlined !text-[22px]" data-icon="person">person</span>
+<span class="font-label text-[12px] font-semibold mt-0.5">Profile</span>
+</a>
+</nav>
+<!-- iOS Home Indicator -->
+<div class="w-full bg-surface pb-2 flex justify-center pointer-events-auto">
+<div class="w-32 h-1 bg-text-primary/20 rounded-full"></div>
+</div>
+</div>
+</div>
+</body></html>

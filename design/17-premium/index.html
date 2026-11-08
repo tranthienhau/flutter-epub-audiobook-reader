@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Inkwell Premium Membership</title>
+<!-- Google Fonts: Baloo 2 & M PLUS Rounded 1c -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&amp;family=M+PLUS+Rounded+1c:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with custom theme config -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "error-container": "#ffdad6",
+            "tertiary": "#006e25",
+            "success-bg": "#E3F4E9",
+            "on-tertiary-container": "#004112",
+            "tertiary-fixed-dim": "#6fdd7a",
+            "on-primary": "#ffffff",
+            "on-primary-fixed-variant": "#881741",
+            "inverse-on-surface": "#ffecef",
+            "tertiary-fixed": "#8bfb93",
+            "support": "#B6E36A",
+            "outline-variant": "#ddbfc4",
+            "surface-variant": "#f2dde0",
+            "on-background": "#24191b",
+            "secondary": "#9d3c5b",
+            "text-secondary": "#5C454C",
+            "on-tertiary": "#ffffff",
+            "control-border": "#B7898E",
+            "surface-bright": "#fff8f7",
+            "on-tertiary-fixed": "#002106",
+            "on-primary-container": "#710032",
+            "surface-container": "#fee9ec",
+            "danger-text": "#CE2020",
+            "surface-alt": "#F8EDF0",
+            "on-error": "#ffffff",
+            "warning-bg": "#FAEFE1",
+            "outline": "#897175",
+            "text-tertiary": "#806A70",
+            "secondary-container": "#ff8aaa",
+            "success-text": "#0E7C3A",
+            "on-error-container": "#93000a",
+            "surface-container-high": "#f8e3e6",
+            "text-primary": "#1F0C11",
+            "on-secondary-fixed-variant": "#7f2544",
+            "on-secondary-container": "#781f3f",
+            "border-hairline": "#EFDDE2",
+            "surface-dim": "#ead5d8",
+            "primary": "#a83159",
+            "on-tertiary-fixed-variant": "#00531a",
+            "accent-pressed": "#A14862",
+            "on-secondary": "#ffffff",
+            "on-secondary-fixed": "#3f001a",
+            "error": "#ba1a1a",
+            "background": "#FCF4F6",
+            "surface-container-low": "#fff0f2",
+            "secondary-fixed": "#ffd9e0",
+            "warning-text": "#A75906",
+            "on-surface": "#24191b",
+            "secondary-fixed-dim": "#ffb1c4",
+            "reader-paper": "#FBF6EE",
+            "accent-tint": "#FEE6ED",
+            "surface": "#FFFFFF",
+            "on-primary-fixed": "#3f0019",
+            "primary-fixed": "#ffd9e0",
+            "surface-container-highest": "#f2dde0",
+            "surface-tint": "#a83159",
+            "danger-bg": "#FBE5E5",
+            "inverse-surface": "#3a2d30",
+            "support-strong": "#72A21F",
+            "tertiary-container": "#46b557",
+            "primary-fixed-dim": "#ffb1c2",
+            "primary-container": "#fb7299",
+            "inverse-primary": "#ffb1c2",
+            "on-surface-variant": "#564145"
+          },
+          borderRadius: {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "space-sm": "0.5rem",
+            "space-xl": "1.5rem",
+            "gutter": "1rem",
+            "margin": "1.25rem",
+            "space-xs": "0.25rem",
+            "space-md": "0.75rem",
+            "space-2xl": "2rem",
+            "space-lg": "1rem"
+          },
+          fontFamily: {
+            body: ["\"M PLUS Rounded 1c\""],
+            display: ["\"Baloo 2\""],
+            caption: ["\"M PLUS Rounded 1c\""],
+            "reader-body": ["\"M PLUS Rounded 1c\""],
+            label: ["\"M PLUS Rounded 1c\""],
+            title: ["\"M PLUS Rounded 1c\""]
+          },
+          fontSize: {
+            body: ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            display: ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            caption: ["13px", { lineHeight: "18px", fontWeight: "500" }],
+            "reader-body": ["18px", { lineHeight: "28.8px", fontWeight: "400" }],
+            label: ["14px", { lineHeight: "20px", fontWeight: "600" }],
+            title: ["20px", { lineHeight: "28px", fontWeight: "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      display: none;
+    }
+    .custom-scroll {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-surface-variant flex justify-center items-center min-h-screen font-body antialiased selection:bg-accent-tint selection:text-primary">
+<!-- Mobile Device Shell (393px × 852px) -->
+<div class="relative w-full max-w-[393px] h-[852px] bg-background shadow-2xl flex flex-col overflow-hidden text-text-primary rounded-[44px] border-[6px] border-text-primary/10">
+<!-- Top Status Bar (Safe Area ~59px) -->
+<div class="relative z-30 pt-3 pb-2 px-7 flex justify-between items-center text-text-primary select-none flex-shrink-0">
+<span class="font-display font-semibold text-[15px] tracking-tight text-text-primary">9:41</span>
+<div class="flex items-center space-x-2 text-text-primary">
+<span class="material-symbols-outlined text-[17px]">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[17px]">wifi</span>
+<span class="material-symbols-outlined text-[20px]">battery_full</span>
+</div>
+</div>
+<!-- Dismiss/Close Floating Header Row -->
+<div class="absolute top-[48px] right-5 z-40">
+<button aria-label="Close" class="w-9 h-9 rounded-full bg-surface/85 backdrop-blur-md shadow-sm border border-border-hairline flex items-center justify-center text-text-primary active:scale-90 transition-transform duration-150 hover:bg-surface" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Scrollable Content Canvas -->
+<div class="flex-1 overflow-y-auto custom-scroll px-5 pb-8 pt-1">
+<!-- Focal Hero Card -->
+<div class="relative rounded-[24px] overflow-hidden shadow-[0_8px_24px_rgba(31,12,17,0.08)] border border-border-hairline bg-surface mb-4">
+<div class="relative h-[210px] w-full">
+<!-- Authentic Photograph Placeholder -->
+<img alt="Authentic warm candid photograph of an open hardback book resting on a rustic natural timber wooden table next to modern sleek over-ear headphones, soft warm morning sunlight streaming in through a nearby window, Australian cozy cottage interior aesthetic, soft natural linen background, 35mm film feel, realistic documentary photography, no CGI, no 3D render." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb5DmF_vtZfLoVwVFCpKSyWB8sRgbqnxGSqi6gRqQ-PHbGQxdnlJBqgwQ9Wldcpk6OeklEEfKBtNSZC1a5DBIOgMmS_70QINNSTSo6nAsPZ4FyOMMialXOqtum3ErjOAapdgiV8Q5Kura4JfrMNyItud65EReBi-ZBVtNEmLdo5HkUurJeuwabxM_TQJs3m53AkUT0ht_zpTj7vC4vPoczJN1VFEWsYz7xUs9RtQNQDtyFWy7joSAllDqvjW11IU5yLMk3xY-RNYY"/>
+<!-- Dark Gradient Overlay holding Brand Title and Premium Badge -->
+<div class="absolute inset-x-0 bottom-0 pt-10 pb-4 px-4 bg-gradient-to-t from-primary via-primary/85 to-transparent flex items-end justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2 mb-0.5">
+<span class="inline-flex items-center gap-1 bg-support text-text-primary text-[11px] font-label font-bold px-2 py-0.5 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">crown</span>
+                  PREMIUM
+                </span>
+</div>
+<h1 class="font-display text-display text-on-primary leading-tight drop-shadow-sm">Inkwell Premium</h1>
+</div>
+</div>
+</div>
+</div>
+<!-- Subtitle Value Proposition -->
+<div class="text-center mb-5 px-2">
+<p class="font-body text-text-secondary text-[15px] leading-snug">
+          Unlock the complete Australian literary catalog.
+        </p>
+</div>
+<!-- Benefits Checklist Card -->
+<div class="bg-surface rounded-[20px] p-4 mb-5 border border-border-hairline shadow-[0_4px_16px_rgba(31,12,17,0.04)]">
+<ul class="space-y-3.5">
+<!-- Benefit 1 -->
+<li class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-success-bg flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-success-text text-[16px] font-bold">check</span>
+</div>
+<div>
+<p class="font-label text-[14px] text-text-primary font-bold leading-tight">Every ebook and audiobook, unlimited</p>
+<p class="font-caption text-text-secondary text-[12px] leading-tight mt-0.5">Read or listen without caps or waiting lists</p>
+</div>
+</li>
+<!-- Benefit 2 -->
+<li class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-success-bg flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-success-text text-[16px] font-bold">check</span>
+</div>
+<div>
+<p class="font-label text-[14px] text-text-primary font-bold leading-tight">Offline downloads</p>
+<p class="font-caption text-text-secondary text-[12px] leading-tight mt-0.5">Perfect for transit, regional flights, and the outback</p>
+</div>
+</li>
+<!-- Benefit 3 -->
+<li class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-success-bg flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-success-text text-[16px] font-bold">check</span>
+</div>
+<div>
+<p class="font-label text-[14px] text-text-primary font-bold leading-tight">Full reference library</p>
+<p class="font-caption text-text-secondary text-[12px] leading-tight mt-0.5">Historical journals, essays, and indigenous archives</p>
+</div>
+</li>
+<!-- Benefit 4 -->
+<li class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-success-bg flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-success-text text-[16px] font-bold">check</span>
+</div>
+<div>
+<p class="font-label text-[14px] text-text-primary font-bold leading-tight">Ad-free daily editions</p>
+<p class="font-caption text-text-secondary text-[12px] leading-tight mt-0.5">Pure reading immersion with curated morning notes</p>
+</div>
+</li>
+</ul>
+</div>
+<!-- Subscription Plan Options -->
+<div class="space-y-3 mb-6" id="planSelectionGroup">
+<!-- Annual Plan (SELECTED by default) -->
+<label class="relative block bg-accent-tint/60 border-2 border-primary rounded-[20px] p-3.5 shadow-sm cursor-pointer transition-all duration-150" id="planAnnual">
+<input checked="" class="sr-only" name="membership_plan" type="radio" value="annual"/>
+<!-- Best Value Badge -->
+<span class="absolute -top-2.5 right-4 bg-support text-text-primary text-[11px] font-label font-bold px-2.5 py-0.5 rounded-full shadow-sm tracking-tight border border-support-strong/30">
+            Best value · Save 37%
+          </span>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<!-- Custom Selected Radio Circle -->
+<div class="w-5 h-5 rounded-full border-2 border-primary flex items-center justify-center bg-surface">
+<div class="w-2.5 h-2.5 rounded-full bg-primary"></div>
+</div>
+<div>
+<p class="font-title text-[16px] text-text-primary font-bold leading-tight">Annual</p>
+<p class="font-caption text-text-secondary text-[12px] mt-0.5">7 days free, then A$89.99 / year</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title text-[15px] text-primary font-bold block">A$7.50<span class="text-[12px] text-text-secondary font-normal">/mo</span></span>
+<span class="text-[11px] text-text-tertiary">Billed annually</span>
+</div>
+</div>
+</label>
+<!-- Monthly Plan (UNSELECTED by default) -->
+<label class="relative block bg-surface border border-border-hairline rounded-[20px] p-3.5 shadow-[0_2px_8px_rgba(31,12,17,0.03)] cursor-pointer transition-all duration-150 hover:border-control-border" id="planMonthly">
+<input class="sr-only" name="membership_plan" type="radio" value="monthly"/>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<!-- Custom Unselected Radio Circle -->
+<div class="w-5 h-5 rounded-full border border-control-border flex items-center justify-center bg-surface">
+<div class="w-2.5 h-2.5 rounded-full bg-transparent"></div>
+</div>
+<div>
+<p class="font-title text-[16px] text-text-primary font-bold leading-tight">Monthly</p>
+<p class="font-caption text-text-secondary text-[12px] mt-0.5">Pay as you go</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-title text-[15px] text-text-primary font-bold block">A$11.99<span class="text-[12px] text-text-secondary font-normal">/mo</span></span>
+<span class="text-[11px] text-text-tertiary">Flexible billing</span>
+</div>
+</div>
+</label>
+</div>
+<!-- Primary Action CTA -->
+<button class="w-full h-[52px] rounded-full bg-primary hover:bg-accent-pressed active:scale-[0.98] transition-all duration-150 text-on-primary font-label text-[16px] font-semibold flex items-center justify-center gap-2 shadow-[0_8px_20px_rgba(168,49,89,0.28)]" type="button">
+<span>Start 7-day free trial</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<!-- Terms and Reassurance Caption -->
+<div class="text-center mt-3 mb-4">
+<p class="font-caption text-[13px] text-text-tertiary">
+          Cancel anytime. Renews automatically.
+        </p>
+</div>
+<!-- Legal & Account Recovery Footer Links -->
+<div class="flex items-center justify-center gap-2 pt-1 pb-2">
+<button class="font-caption text-[12px] text-primary hover:underline font-medium" type="button">Restore purchases</button>
+<span class="text-border-hairline">•</span>
+<button class="font-caption text-[12px] text-primary hover:underline font-medium" type="button">Terms</button>
+<span class="text-border-hairline">•</span>
+<button class="font-caption text-[12px] text-primary hover:underline font-medium" type="button">Privacy</button>
+</div>
+</div>
+<!-- Home Indicator Bar (Safe Area Bottom ~34px) -->
+<div class="w-full pb-2 pt-1 flex justify-center items-center select-none bg-transparent">
+<div class="w-32 h-1 bg-text-primary/20 rounded-full"></div>
+</div>
+</div>
+<!-- Interactive Radio Toggle Behavior -->
+<script>
+    const annualCard = document.getElementById('planAnnual');
+    const monthlyCard = document.getElementById('planMonthly');
+    const inputs = document.querySelectorAll('input[name="membership_plan"]');
+
+    function updatePlanCards() {
+      inputs.forEach(input => {
+        const card = input.closest('label');
+        const radioCircle = card.querySelector('div.rounded-full.border > div');
+        const outerCircle = card.querySelector('div.rounded-full.border');
+        
+        if (input.checked) {
+          card.classList.remove('bg-surface', 'border-border-hairline');
+          card.classList.add('bg-accent-tint/60', 'border-2', 'border-primary');
+          outerCircle.classList.remove('border-control-border');
+          outerCircle.classList.add('border-primary');
+          radioCircle.classList.remove('bg-transparent');
+          radioCircle.classList.add('bg-primary');
+        } else {
+          card.classList.remove('bg-accent-tint/60', 'border-2', 'border-primary');
+          card.classList.add('bg-surface', 'border', 'border-border-hairline');
+          outerCircle.classList.remove('border-primary');
+          outerCircle.classList.add('border-control-border');
+          radioCircle.classList.remove('bg-primary');
+          radioCircle.classList.add('bg-transparent');
+        }
+      });
+    }
+
+    annualCard.addEventListener('click', () => {
+      const radio = annualCard.querySelector('input');
+      radio.checked = true;
+      updatePlanCards();
+    });
+
+    monthlyCard.addEventListener('click', () => {
+      const radio = monthlyCard.querySelector('input');
+      radio.checked = true;
+      updatePlanCards();
+    });
+  </script>
+</body></html>

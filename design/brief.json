@@ -1,0 +1,421 @@
+{
+  "title": "Inkwell",
+  "slug": "inkwell-reader",
+  "domain": "media",
+  "style": "bright",
+  "allow3D": false,
+  "features": [
+    "Ebook library with EPUB reading (pagination, table of contents, font size, themes)",
+    "Audiobook streaming with background playback, chapters, speed and sleep timer",
+    "Searchable content and reference library",
+    "Daily editorial content (Today feed)",
+    "User accounts, bookmarks, highlights and favourites",
+    "Free and premium membership with paywall and gated titles",
+    "CMS-driven content (new titles and daily pieces without app release)",
+    "Offline downloads"
+  ],
+  "screenCount": 19,
+  "bannedTerms": [
+    "AI narrator",
+    "Kindle",
+    "Audible",
+    "NFT",
+    "Crypto",
+    "Podcast ads"
+  ],
+  "sharedComponents": {
+    "bottomTabBar": {
+      "tabs": [
+        "Today",
+        "Library",
+        "Search",
+        "Profile"
+      ],
+      "icons": [
+        "sun",
+        "book-open",
+        "search",
+        "user"
+      ],
+      "note": "Flat white bar, 4 tabs in this exact order. Active tab icon + label in accentFill with a small pill indicator; inactive in text.tertiary. A mini player (cover thumb, title, play/pause) sits directly above the tab bar on Today, Library and Search when audio is loaded."
+    },
+    "statusBar": "iOS status bar, 59px top inset kept clear.",
+    "controls": "Primary button: pill, accentFill bg, white label 16/600, pressed = accentPressed, disabled = 40% opacity. Secondary: pill, white bg, 1.5px borderStrong outline, text.primary label. Input: 12px radius, white, borderStrong border, focus = 2px accent ring, error = danger border + caption. Card: 20px radius, white, soft shadow. Chip: pill 13/600, accentTint fill with accentFill text; selected = accentFill fill with white text. Premium badge: small pill, support tint with dark text, crown icon."
+  },
+  "screens": [
+    {
+      "name": "welcome",
+      "group": "onboarding",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "purpose": "First launch: brand promise for reading + listening",
+      "content": "Hero real photo of a woman reading on a sunlit couch with headphones, brand gradient band, headline 'Read it. Hear it. Every day.', subcopy 'Ebooks, audiobooks and a fresh daily read from Australian authors.', primary 'Create free account', secondary 'I already have an account', small caption 'Free forever, upgrade anytime'."
+    },
+    {
+      "name": "sign-in",
+      "group": "onboarding",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "purpose": "Sign in to sync bookmarks, favourites and membership",
+      "content": "Back chevron, title 'Welcome back', email input (filled mia.harper@email.com.au), password input, 'Forgot password?' link, primary 'Sign in', divider 'or', Continue with Apple and Continue with Google outline buttons, footer 'New here? Create an account'."
+    },
+    {
+      "name": "today",
+      "group": "core",
+      "nav": "Today",
+      "states": [
+        "default",
+        "empty"
+      ],
+      "purpose": "Daily editorial home with continue reading/listening",
+      "content": "Greeting 'Good morning, Mia' + date 'Monday 9 November'. Focal: large Today's Read hero card with real photo (Blue Mountains at dawn), kicker 'DAILY ESSAY', title 'Why we still write letters', author 'Clare Whitfield', '6 min read'. Section 'Continue' with two cards: ebook 'The Salt Road' progress 42% with cover, audiobook 'Harbour Lights' 2h 14m left with headphones icon. Section 'New this week' horizontal row of 4 book covers. Mini player above tab bar."
+    },
+    {
+      "name": "daily-article",
+      "group": "detail",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "purpose": "Read today's editorial piece",
+      "content": "Full-bleed hero photo (Blue Mountains dawn), back + bookmark + share icons, kicker 'DAILY ESSAY · 9 NOV', title 'Why we still write letters', author avatar real photo Clare Whitfield + '6 min read', 'Listen to this essay 7:12' audio pill, body paragraphs in readable 17/1.6 serif-free type with a pull quote in accent, end card 'From the author' linking to her ebook 'Paper Trails'."
+    },
+    {
+      "name": "library",
+      "group": "core",
+      "nav": "Library",
+      "states": [
+        "default",
+        "empty"
+      ],
+      "purpose": "My shelf of ebooks and audiobooks",
+      "content": "Title 'Library', segmented control 'All / Ebooks / Audiobooks', sort chip 'Recent'. Focal: grid of 6 real book covers with title, author and progress bar (The Salt Road 42%, Harbour Lights 61% audio, Red Dirt Country 8%, Notes from Hobart 100% Finished, The Quiet Coast premium lock badge, A Year of Small Things 0%). Download check icons on two. Mini player above tab bar."
+    },
+    {
+      "name": "book-detail",
+      "group": "detail",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "purpose": "Title page with read and listen options",
+      "content": "Large real cover 'The Salt Road' by Eleanor Marsh, rating 4.7 (1,284), chips 'Historical fiction' 'Australia' '312 pages' '9h 40m audio'. Two primary actions side by side: 'Read' (book icon) and 'Listen' (headphones). Secondary row: favourite heart, download, add bookmark. Blurb paragraph, 'Narrated by Tom Ashby' with real portrait, 'More from Eleanor Marsh' cover row."
+    },
+    {
+      "name": "epub-reader",
+      "group": "core",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "purpose": "Read an EPUB chapter",
+      "content": "Minimal chrome: top bar with back, chapter title 'Chapter 7 · The Long Paddock', icons for contents, bookmark (filled accent), text settings 'Aa'. Page of real novel prose in 18px body on warm paper background with one paragraph highlighted in support tint. Bottom: page scrubber slider, 'Page 131 of 312 · 14 min left in chapter', listen toggle pill 'Switch to audio at this spot'."
+    },
+    {
+      "name": "reader-settings",
+      "group": "detail",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "purpose": "Adjust reading appearance",
+      "content": "Reader page dimmed behind a bottom sheet. Sheet: title 'Display', font size slider with small and large A, font choice chips 'Original' 'Serif' 'Sans' 'Dyslexic-friendly', theme swatches White, Paper, Sepia, Night (Paper selected), line spacing 3 options, margins 3 options, toggle 'Scroll instead of pages'."
+    },
+    {
+      "name": "contents-bookmarks",
+      "group": "detail",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "purpose": "Navigate the book and saved spots",
+      "content": "Header 'The Salt Road', tabs 'Contents / Bookmarks / Highlights' (Bookmarks active). List of 4 bookmarks each with chapter name, page number, snippet and date (e.g. 'Ch 7 · p.131 · \"The paddock ran silver under the moon...\" · Today'). Highlights count badge 6. Swipe-to-delete hint on one row."
+    },
+    {
+      "name": "audiobook-player",
+      "group": "core",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "purpose": "Stream an audiobook",
+      "content": "Collapse chevron, 'Playing from Library'. Focal: large real cover 'Harbour Lights' by Jonah Reid, read by Priya Nair. Chapter 'Chapter 12 · Low Tide', scrubber 18:04 / 41:30, controls: back 15s, large play/pause in accentFill circle, forward 30s. Row: speed '1.25x', sleep timer moon 'End of chapter', chapters list icon, AirPlay icon, bookmark clip. 'Streaming · Downloaded for offline' caption."
+    },
+    {
+      "name": "chapters-sleep",
+      "group": "detail",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "purpose": "Pick a chapter or set a sleep timer",
+      "content": "Bottom sheet over dimmed player. Segmented 'Chapters / Sleep timer'. Chapters list 10-14 with durations, Chapter 12 playing with equalizer icon and progress. Below, compact sleep timer options chips: 15 min, 30 min, 45 min, End of chapter (selected)."
+    },
+    {
+      "name": "search",
+      "group": "core",
+      "nav": "Search",
+      "states": [
+        "default"
+      ],
+      "purpose": "Search books, audiobooks, daily pieces and reference library",
+      "content": "Search field with query 'gold rush'. Filter chips 'All' (selected) 'Ebooks' 'Audiobooks' 'Daily' 'Reference'. Focal: top result card reference entry 'Victorian Gold Rush (1851)' with real archival-style photo. Results list: ebook 'Red Dirt Country' cover, audiobook 'Ballarat Nights' cover with headphones badge, daily essay 'The town that gold built' thumb. Recent searches row. Mini player above tab bar."
+    },
+    {
+      "name": "reference-entry",
+      "group": "detail",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "purpose": "Read a reference library entry",
+      "content": "Breadcrumb 'Reference › History › 1850s', title 'Victorian Gold Rush', real photo of gold panning pan in a creek, quick facts card (Began 1851, Region Ballarat and Bendigo, Population growth 7x), body text, 'Related titles' row of 3 covers, 'See also' links (Eureka Stockade, Cobb & Co)."
+    },
+    {
+      "name": "favourites",
+      "group": "settings",
+      "nav": "Profile",
+      "states": [
+        "default"
+      ],
+      "purpose": "Saved favourites across content types",
+      "content": "Back, title 'Favourites', chips 'Books 8' 'Daily 5' 'Reference 3'. List cards: Paper Trails ebook, Harbour Lights audiobook, daily essay 'Why we still write letters', reference 'Eureka Stockade', each with heart filled accent and type label."
+    },
+    {
+      "name": "premium",
+      "group": "settings",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "purpose": "Upgrade from free to premium membership",
+      "content": "Close X. Focal: gradient hero with real photo of open book and headphones on a timber table, title 'Inkwell Premium', bullets with check icons: 'Every ebook and audiobook, unlimited', 'Offline downloads', 'Full reference library', 'Ad-free daily editions'. Plan cards: Annual A$89.99/yr (Save 37%, selected, 'Best value' badge) and Monthly A$11.99/mo. Primary 'Start 7-day free trial', caption 'Cancel anytime. Renews automatically.', links Restore purchases · Terms · Privacy."
+    },
+    {
+      "name": "profile",
+      "group": "settings",
+      "nav": "Profile",
+      "states": [
+        "default"
+      ],
+      "purpose": "Account, membership and stats",
+      "content": "Real portrait avatar Mia Harper, email, membership pill 'Free plan' with 'Upgrade' link. Focal stat card: '12 books this year' with streak '9 day reading streak'. List rows: Favourites, Bookmarks and highlights, Downloads (3 · 1.2 GB), Reading preferences, Notifications, Membership, Help, Sign out."
+    },
+    {
+      "name": "downloads",
+      "group": "settings",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "purpose": "Manage offline downloads",
+      "content": "Back, title 'Downloads', storage bar '1.2 GB of 64 GB used'. List: The Salt Road ebook 4 MB, Harbour Lights audiobook 812 MB downloading 64% with progress, Notes from Hobart 380 MB. Toggle 'Download on Wi-Fi only' on. 'Remove all downloads' text button in danger."
+    }
+  ],
+  "designSystem": {
+    "variant": "P47",
+    "theme": "light",
+    "frame": "393x852, top inset 59px, bottom inset 34px",
+    "color": {
+      "background": "#FCF4F6",
+      "surface": "#FFFFFF",
+      "surfaceAlt": "#F8EDF0",
+      "accent": "#FB7299",
+      "accentFill": "#AB4766",
+      "accentTint": "#FEE6ED",
+      "accentPressed": "#A14862",
+      "support": "#B6E36A",
+      "text": {
+        "primary": "#1F0C11",
+        "secondary": "#5C454C",
+        "tertiary": "#806A70"
+      },
+      "border": "#EFDDE2",
+      "paper": "#FBF6EE",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "gradient": [
+        "#AB4766",
+        "#A14862"
+      ],
+      "statusOn": {
+        "warning": {
+          "fg": "#A75906",
+          "tint": "#FAEFE1"
+        },
+        "success": {
+          "fg": "#0E7C3A",
+          "tint": "#E3F4E9"
+        },
+        "danger": {
+          "fg": "#CE2020",
+          "tint": "#FBE5E5"
+        },
+        "info": {
+          "fg": "#AB4766",
+          "tint": "#F5E9ED"
+        }
+      },
+      "supportStrong": "#72A21F",
+      "borderStrong": "#B7898E"
+    },
+    "type": {
+      "fontFamily": "M PLUS Rounded 1c",
+      "displayFamily": "Baloo 2",
+      "numeralFamily": "M PLUS Rounded 1c",
+      "display": "32 / 700 / -0.02em",
+      "title": "20 / 700",
+      "body": "16 / 400",
+      "label": "14 / 600",
+      "caption": "13 / 500",
+      "minSize": "12px (13px chips and tags, 14px safety or legal text)",
+      "scaleRule": "Use only the 5 declared sizes (display, title, body, label, caption)."
+    },
+    "radius": {
+      "card": 20,
+      "control": 14,
+      "input": 12,
+      "pill": 999
+    },
+    "spacing": "8pt scale (4, 8, 12, 16, 24, 32); screen edge padding 20px",
+    "elevation": "card = 0 1px 2px rgba(31,12,17,.04) + 0 8px 24px rgba(31,12,17,.06)",
+    "icons": "Lucide-style rounded outline, 24px, 1.75 stroke",
+    "a11y": "white labels only on accentFill; bright accent for large fills/icons; tap targets >= 44pt"
+  },
+  "tokenCheck": {
+    "results": [
+      {
+        "pair": "text.primary on background",
+        "ratio": 17.35,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.primary on surface",
+        "ratio": 18.77,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.secondary on background",
+        "ratio": 8.05,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.secondary on surface",
+        "ratio": 8.71,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.tertiary on background",
+        "ratio": 4.61,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.tertiary on surface",
+        "ratio": 4.98,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "white label on accentFill (buttons)",
+        "ratio": 4.68,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "accentFill text on accentTint (chips, selected)",
+        "ratio": 3.96,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#AB4766",
+        "after": 4.64
+      },
+      {
+        "pair": "accentFill as link text on background",
+        "ratio": 5.07,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "white on hero gradient (both stops)",
+        "ratio": 5.49,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "warning text on its tint and on surface",
+        "ratio": 2.81,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#A75906",
+        "after": 4.54
+      },
+      {
+        "pair": "success text on its tint and on surface",
+        "ratio": 2.89,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#0E7C3A",
+        "after": 4.64
+      },
+      {
+        "pair": "danger text on its tint and on surface",
+        "ratio": 4.01,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#CE2020",
+        "after": 4.53
+      },
+      {
+        "pair": "support as chart line / icon on surface (non-text 3:1)",
+        "ratio": 1.48,
+        "target": 3.0,
+        "pass": false,
+        "fixedTo": "#72A21F",
+        "after": 3.04
+      },
+      {
+        "pair": "input / control border on surface (non-text 3:1)",
+        "ratio": 1.3,
+        "target": 3.0,
+        "pass": false,
+        "fixedTo": "#B7898E",
+        "after": 3.01
+      }
+    ],
+    "changed": {
+      "accentFill": {
+        "from": "#B75370",
+        "to": "#AB4766"
+      }
+    },
+    "passed": true
+  }
+}

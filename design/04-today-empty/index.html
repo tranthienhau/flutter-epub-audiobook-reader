@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Inkwell - Today</title>
+<!-- Google Fonts: M PLUS Rounded 1c & Baloo 2 -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&amp;family=M+PLUS+Rounded+1c:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "text-primary": "#1F0C11",
+            "success-bg": "#E3F4E9",
+            "on-tertiary": "#ffffff",
+            "on-secondary": "#ffffff",
+            "surface-container-high": "#f8e3e6",
+            "primary-container": "#fb7299",
+            "error": "#ba1a1a",
+            "surface-dim": "#ead5d8",
+            "on-primary-fixed": "#3f0019",
+            "secondary-fixed-dim": "#ffb1c4",
+            "secondary-container": "#ff8aaa",
+            "support-strong": "#72A21F",
+            "surface-container-lowest": "#ffffff",
+            "on-surface-variant": "#564145",
+            "on-surface": "#24191b",
+            "surface-container-low": "#fff0f2",
+            "surface": "#FFFFFF",
+            "background": "#FCF4F6",
+            "on-primary-container": "#710032",
+            "error-container": "#ffdad6",
+            "on-tertiary-fixed-variant": "#00531a",
+            "text-tertiary": "#806A70",
+            "accent-pressed": "#A14862",
+            "surface-alt": "#F8EDF0",
+            "tertiary-container": "#46b557",
+            "on-error": "#ffffff",
+            "primary-fixed": "#ffd9e0",
+            "surface-variant": "#f2dde0",
+            "reader-paper": "#FBF6EE",
+            "on-secondary-fixed-variant": "#7f2544",
+            "control-border": "#B7898E",
+            "on-primary": "#ffffff",
+            "warning-bg": "#FAEFE1",
+            "surface-tint": "#a83159",
+            "text-secondary": "#5C454C",
+            "on-background": "#24191b",
+            "inverse-surface": "#3a2d30",
+            "inverse-on-surface": "#ffecef",
+            "danger-bg": "#FBE5E5",
+            "warning-text": "#A75906",
+            "on-tertiary-container": "#004112",
+            "success-text": "#0E7C3A",
+            "on-tertiary-fixed": "#002106",
+            "primary": "#AB4766",
+            "outline": "#897175",
+            "tertiary-fixed": "#8bfb93",
+            "secondary": "#9d3c5b",
+            "primary-fixed-dim": "#ffb1c2",
+            "on-primary-fixed-variant": "#881741",
+            "outline-variant": "#ddbfc4",
+            "surface-container-highest": "#f2dde0",
+            "border-hairline": "#EFDDE2",
+            "tertiary-fixed-dim": "#6fdd7a",
+            "on-error-container": "#93000a",
+            "surface-bright": "#fff8f7",
+            "tertiary": "#006e25",
+            "surface-container": "#fee9ec",
+            "on-secondary-container": "#781f3f",
+            "danger-text": "#CE2020",
+            "inverse-primary": "#ffb1c2",
+            "accent-tint": "#FEE6ED",
+            "support": "#B6E36A",
+            "secondary-fixed": "#ffd9e0"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "0.75rem",
+            "space-lg": "1rem",
+            "gutter": "1rem",
+            "space-sm": "0.5rem",
+            "space-xl": "1.5rem",
+            "space-2xl": "2rem",
+            "margin": "1.25rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "title": ["\"M PLUS Rounded 1c\""],
+            "display": ["\"Baloo 2\""],
+            "caption": ["\"M PLUS Rounded 1c\""],
+            "body": ["\"M PLUS Rounded 1c\""],
+            "label": ["\"M PLUS Rounded 1c\""],
+            "reader-body": ["\"M PLUS Rounded 1c\""]
+          },
+          "fontSize": {
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+            "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "reader-body": ["18px", { "lineHeight": "28.8px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 24px;
+      line-height: 1;
+      display: inline-block;
+    }
+    .material-symbols-outlined.fill-icon {
+      font-variation-settings: 'FILL' 1;
+    }
+    /* Soft ambient card depth token matching design system */
+    .card-ambient-shadow {
+      box-shadow: 0 1px 2px rgba(31, 12, 17, 0.04), 0 8px 24px rgba(31, 12, 17, 0.06);
+    }
+    /* Hide scrollbars for horizontal carousels while maintaining touch fluidity */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary antialiased min-h-screen flex justify-center">
+<!-- Mobile Frame Container (393x852) -->
+<div class="w-full max-w-[393px] min-h-[852px] bg-background relative flex flex-col pb-28">
+<!-- Top App Bar (Shared Component Anchor) -->
+<header class="bg-surface dark:bg-surface text-primary dark:text-inverse-primary border-b border-border-hairline dark:border-outline-variant shadow-sm sticky top-0 z-40">
+<div class="flex justify-between items-center w-full px-5 py-3 max-w-md mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity active:scale-95 transition-transform duration-150 cursor-pointer" data-icon="menu_book">menu_book</span>
+<span class="font-display text-display text-primary dark:text-inverse-primary tracking-tight text-xl leading-none">Inkwell</span>
+</div>
+<button aria-label="Search" class="p-1 text-primary hover:opacity-80 transition-opacity active:scale-95 transition-transform duration-150" type="button">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-5 pt-4 space-y-6">
+<!-- Morning Greeting Header -->
+<section class="flex items-center justify-between">
+<div>
+<p class="font-label text-caption text-text-secondary font-medium tracking-wide">Monday 9 November</p>
+<h1 class="font-display text-2xl font-bold text-text-primary tracking-tight mt-0.5">Good morning, Mia</h1>
+</div>
+<!-- Profile Avatar with Active Dot -->
+<div class="relative active:scale-95 transition-transform duration-150 cursor-pointer">
+<img alt="Mia" class="w-12 h-12 rounded-full object-cover border-2 border-surface shadow-sm" src="https://lh3.googleusercontent.com/aida/ALJJyrDl1DSU6vmz4_2DtQbeNam_5eV1SnfPOmWlJrunsenp5TxTBk_QDZc1I6X6l0k-HQyb7HYhuFg4pMiK0wksvlOF79nXI8YfvySeORKKkOlW8VUjvgJbv6OBNdvRrQOfuu8i7t6HN8VbgogwGvSS7FAx_3hZ5ugYBvpWn6Wqp8ZCzWhuUn-gIq36z8bfI0U3B66UM3yN3TgKuXQl3zEqvh-a2QJYN6lCc-p8aNx8fJz1PpZGwy84Ag2UJOE"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-support border-2 border-surface rounded-full"></span>
+</div>
+</section>
+<!-- Hero Card: Today's Read -->
+<section class="relative rounded-[20px] overflow-hidden card-ambient-shadow active:scale-[0.99] transition-transform duration-200 cursor-pointer group">
+<div class="h-60 w-full relative">
+<img alt="Blue Mountains at dawn" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/ALJJyrAXWLAwee2hqsrXx0Jn91euAjgWqIZBwoGYABV_NvaHnzEBIqUQoe49TErFPVg3vJiOklUlPQJKYqGi8k30acjf9Lo5DdGqvhit5vLdVUOTw-mQx2wRMNU_g-0kjdsBOq58YiAykL6Sz-kSO0nS1jTHmyymIPOta9wfcj49XC938pJhza_5jwXuns5DaZI3vu5k04TomgtuWEs-0UPCWRUh9d-zmCJ9U52HRgYQncly--LoLb1iOsm2qwk"/>
+<!-- Subtle Dark Scrim Gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-text-primary/95 via-text-primary/40 to-transparent"></div>
+<!-- Hero Card Content -->
+<div class="absolute inset-0 p-5 flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-label font-semibold tracking-wider text-surface bg-surface/20 backdrop-blur-md uppercase">
+                DAILY ESSAY
+              </span>
+<button aria-label="Bookmark" class="w-8 h-8 rounded-full bg-surface/20 backdrop-blur-md flex items-center justify-center text-surface hover:bg-surface/30 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<div>
+<h2 class="font-display text-2xl font-bold text-surface tracking-tight leading-snug">
+                Why we still write letters
+              </h2>
+<div class="flex items-center gap-1.5 mt-2 text-surface/90 font-body text-xs font-medium">
+<span>Clare Whitfield</span>
+<span>•</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span>
+<span>6 min read</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Empty State Section: "Your shelf is waiting" -->
+<section class="bg-surface rounded-[20px] p-5 card-ambient-shadow flex flex-col">
+<!-- Authentic Timber Shelf Photo Header -->
+<div class="w-full h-36 rounded-xl overflow-hidden mb-4 relative bg-surface-alt">
+<img alt="Empty timber bookshelf with small plant in soft morning light" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpCtssdQeTjOK794wo1jf0xg6Eob4I_kHuwt0EplIqtOzzs58kynMzWyyqvFFFqsXlJ58ZkvWFpDsp7gKvL2dUy1oyNxQ798Xrbw26_0SzgZc3MOKXBLM1Z_Yo5ZgHv3DUk1w8OZYjp1qE3Tq4K4h-D9LlY4mDXKS6fuXgJ26eN1XlTcsjBiHDd52b2o8V5wC9E47hH1sC2AsLn2sfJyj9yRE_XpMdrcZyYYsbROu9i5jJ1oRi39HVgg34YYd5hcLNsFnArbZN8LY"/>
+<div class="absolute inset-0 bg-text-primary/5"></div>
+</div>
+<div class="text-center px-2">
+<h3 class="font-display text-xl font-bold text-text-primary tracking-tight">
+            Your shelf is waiting
+          </h3>
+<p class="font-body text-sm text-text-secondary leading-relaxed mt-2 mb-5">
+            Start a book or an audiobook and it will appear here so you can pick up where you left off.
+          </p>
+<!-- Primary CTA Pill Button -->
+<button class="w-full py-3.5 px-6 rounded-full bg-primary hover:bg-accent-pressed text-surface font-label text-sm font-semibold shadow-sm active:scale-95 transition-transform duration-150 inline-flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="local_library">local_library</span>
+<span>Browse the library</span>
+</button>
+<!-- Free Audiobook Sub-Action -->
+<div class="mt-3.5">
+<a class="font-label text-sm font-medium text-primary hover:underline inline-flex items-center gap-1 active:opacity-75 transition-opacity" href="#">
+<span>Try a free audiobook</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Spotlight Banner: Australian Voices -->
+<section class="rounded-[20px] bg-accent-tint/60 border border-border-hairline p-4 card-ambient-shadow">
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-full bg-primary text-surface flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label text-xs font-bold tracking-wider text-primary uppercase">SPOTLIGHT ON AUSTRALIAN VOICES</span>
+</div>
+<p class="font-body text-xs text-text-secondary mt-1 leading-relaxed">
+              Discover stories from the red center to the southern coastlines. Curated each week by our Melbourne editors.
+            </p>
+</div>
+</div>
+</section>
+<!-- Recommendations: "New this week" Horizontal Bento/Carousel -->
+<section class="space-y-3 pb-2">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-display text-lg font-bold text-text-primary tracking-tight">New this week</h3>
+<p class="font-body text-xs text-text-tertiary">Selected new releases from local authors</p>
+</div>
+<button class="text-primary font-label text-xs font-semibold hover:underline flex items-center" type="button">
+<span>See all</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<div class="flex gap-3.5 overflow-x-auto no-scrollbar pt-1 pb-2 -mx-5 px-5">
+<!-- Book Card 1 -->
+<article class="shrink-0 w-32 bg-surface rounded-[20px] p-2.5 card-ambient-shadow flex flex-col active:scale-95 transition-transform duration-150 cursor-pointer">
+<div class="w-full aspect-[3/4] rounded-lg overflow-hidden bg-surface-alt shadow-sm relative mb-2">
+<img alt="The Salt Road" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrDgtPIMsW3dhML8nyV6brsKZ3sMBm--H24X7M5D7VA14El7oRIOuz9O0ridIyFfADGO7nKXaM6Pd86Dzj8mMdTcHZC-VJL3XsbAEuKLqt_fipWkV8t_aQ9Kf1SHTjgCuUk1MuuSoDzK5jNMU0pHL8kFyt5ctuubYb1EW_ZQ5DILA78xlPlOzdzM17WojPSLlNfmn0syOHBXoyr1rmWmvuMLUDuxyCcXmLws7qqeqY1mwwvVckJX5Gd3L5o"/>
+</div>
+<h4 class="font-display text-sm font-bold text-text-primary truncate">The Salt Road</h4>
+<p class="font-body text-xs text-text-tertiary truncate">Eleanor Marsh</p>
+<div class="mt-2 pt-2 border-t border-border-hairline flex items-center justify-between text-xs text-text-secondary font-medium">
+<span class="inline-flex items-center gap-0.5 text-warning-text">
+<span class="material-symbols-outlined text-[13px] fill-icon" data-icon="star">star</span>
+<span>4.8</span>
+</span>
+<span class="text-text-tertiary text-[11px]">eBook</span>
+</div>
+</article>
+<!-- Book Card 2 (Audiobook) -->
+<article class="shrink-0 w-32 bg-surface rounded-[20px] p-2.5 card-ambient-shadow flex flex-col active:scale-95 transition-transform duration-150 cursor-pointer">
+<div class="w-full aspect-[3/4] rounded-lg overflow-hidden bg-surface-alt shadow-sm relative mb-2">
+<img alt="Harbour Lights" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrChcyKu7PrT6PyPQhng-O8dNhFtunXDXNzLiwEow6_7KKePUtcf7zQ6O3V3MqUdGwL4eqOk_j_rxb7AJpjS6Hn9Tb3mPtSFOAxcD_T-2lv6nwURev9eggW5Kuizpx_Ev_Uj-VGYHIi9bI1_HvShs9mqAg-Olhoaupkwm_4xJgkJvvD8TMCOOSfFt_NWnLoaj3nDF8WniWovg_umgqfhz6kAdJVGXLwPl9N47XA_azWVbEanwPG2vDLCR0Y"/>
+<!-- Audio badge -->
+<span class="absolute bottom-1.5 right-1.5 bg-text-primary/80 backdrop-blur-sm text-surface text-[10px] font-label font-semibold px-1.5 py-0.5 rounded-full flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[12px]" data-icon="headphones">headphones</span>
+<span>8h 42m</span>
+</span>
+</div>
+<h4 class="font-display text-sm font-bold text-text-primary truncate">Harbour Lights</h4>
+<p class="font-body text-xs text-text-tertiary truncate">Jonah Reid</p>
+<div class="mt-2 pt-2 border-t border-border-hairline flex items-center justify-between text-xs text-text-secondary font-medium">
+<span class="inline-flex items-center gap-0.5 text-warning-text">
+<span class="material-symbols-outlined text-[13px] fill-icon" data-icon="star">star</span>
+<span>4.9</span>
+</span>
+<span class="text-primary text-[11px] font-semibold">Audio</span>
+</div>
+</article>
+<!-- Book Card 3 -->
+<article class="shrink-0 w-32 bg-surface rounded-[20px] p-2.5 card-ambient-shadow flex flex-col active:scale-95 transition-transform duration-150 cursor-pointer">
+<div class="w-full aspect-[3/4] rounded-lg overflow-hidden bg-surface-alt shadow-sm relative mb-2">
+<img alt="Paper Bark &amp; Sun" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrD6SWp1EmlriiL8ok2jPYM7KFBTjcxK5Dky02WMcECZXuvvE99c1qIY8I-BR4ffyoXwzqFKkPoMxF1OYEc3mfAWYrSVIEYPvorLYBeBVBjzlSvDOPv0J6mRIWjpbP8HmxY5lDAs62B5D0nHlc65S6gmhsD7OfYBqZGVQFH0P101-TxAyI81SJemeDiCx_CILn_GHfJkDVW2lGvmVGoQAXQ6t3vJrYGWQfhxhOV-UgbQqlzLZSJzQIB3CuQ"/>
+</div>
+<h4 class="font-display text-sm font-bold text-text-primary truncate">Paper Bark &amp; Sun</h4>
+<p class="font-body text-xs text-text-tertiary truncate">Lily Tran</p>
+<div class="mt-2 pt-2 border-t border-border-hairline flex items-center justify-between text-xs text-text-secondary font-medium">
+<span class="inline-flex items-center gap-0.5 text-warning-text">
+<span class="material-symbols-outlined text-[13px] fill-icon" data-icon="star">star</span>
+<span>4.7</span>
+</span>
+<span class="text-text-tertiary text-[11px]">eBook</span>
+</div>
+</article>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Shared Component Anchor) -->
+<!-- Fixed 4 tabs: Today (active), Library, Search, Profile -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pt-2 pb-6 max-w-md mx-auto bg-surface dark:bg-surface text-primary dark:text-inverse-primary border-t border-border-hairline dark:border-outline-variant shadow-[0_-4px_16px_rgba(31,12,17,0.04)]">
+<!-- Tab 1: Today (ACTIVE) -->
+<a aria-current="page" class="flex flex-col items-center justify-center bg-accent-tint dark:bg-on-secondary-container text-primary dark:text-primary-fixed rounded-full px-4 py-1.5 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined fill-icon text-[22px]" data-icon="wb_sunny">wb_sunny</span>
+<span class="font-label text-xs font-semibold mt-0.5">Today</span>
+</a>
+<!-- Tab 2: Library -->
+<a class="flex flex-col items-center justify-center text-text-tertiary dark:text-outline px-4 py-1.5 hover:text-primary dark:hover:text-primary-fixed transition-colors active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="auto_stories">auto_stories</span>
+<span class="font-label text-xs font-medium mt-0.5">Library</span>
+</a>
+<!-- Tab 3: Search -->
+<a class="flex flex-col items-center justify-center text-text-tertiary dark:text-outline px-4 py-1.5 hover:text-primary dark:hover:text-primary-fixed transition-colors active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="search">search</span>
+<span class="font-label text-xs font-medium mt-0.5">Search</span>
+</a>
+<!-- Tab 4: Profile -->
+<a class="flex flex-col items-center justify-center text-text-tertiary dark:text-outline px-4 py-1.5 hover:text-primary dark:hover:text-primary-fixed transition-colors active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="person">person</span>
+<span class="font-label text-xs font-medium mt-0.5">Profile</span>
+</a>
+</nav>
+</div>
+</body></html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Inkwell - Chapters and Sleep Timer</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Baloo 2 and M PLUS Rounded 1c -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&amp;family=M+PLUS+Rounded+1c:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-highest": "#f2dde0",
+            "on-surface-variant": "#564145",
+            "on-secondary-fixed-variant": "#7f2544",
+            "surface-variant": "#f2dde0",
+            "danger-bg": "#FBE5E5",
+            "on-primary": "#ffffff",
+            "border-hairline": "#EFDDE2",
+            "on-tertiary": "#ffffff",
+            "on-primary-container": "#710032",
+            "tertiary-container": "#46b557",
+            "on-secondary-fixed": "#3f001a",
+            "on-error-container": "#93000a",
+            "warning-text": "#A75906",
+            "success-text": "#0E7C3A",
+            "on-error": "#ffffff",
+            "on-background": "#24191b",
+            "on-primary-fixed-variant": "#881741",
+            "success-bg": "#E3F4E9",
+            "control-border": "#B7898E",
+            "reader-paper": "#FBF6EE",
+            "surface-container-high": "#f8e3e6",
+            "on-surface": "#24191b",
+            "primary-fixed-dim": "#ffb1c2",
+            "accent-pressed": "#A14862",
+            "on-tertiary-container": "#004112",
+            "secondary-fixed-dim": "#ffb1c4",
+            "danger-text": "#CE2020",
+            "error": "#ba1a1a",
+            "background": "#FCF4F6",
+            "primary": "#a83159",
+            "on-secondary": "#ffffff",
+            "error-container": "#ffdad6",
+            "tertiary-fixed-dim": "#6fdd7a",
+            "surface": "#FFFFFF",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-container": "#781f3f",
+            "outline-variant": "#ddbfc4",
+            "inverse-surface": "#3a2d30",
+            "secondary-fixed": "#ffd9e0",
+            "surface-dim": "#ead5d8",
+            "surface-container": "#fee9ec",
+            "support-strong": "#72A21F",
+            "on-primary-fixed": "#3f0019",
+            "warning-bg": "#FAEFE1",
+            "on-tertiary-fixed": "#002106",
+            "surface-bright": "#fff8f7",
+            "inverse-primary": "#ffb1c2",
+            "tertiary-fixed": "#8bfb93",
+            "surface-alt": "#F8EDF0",
+            "tertiary": "#006e25",
+            "text-tertiary": "#806A70",
+            "text-secondary": "#5C454C",
+            "secondary-container": "#ff8aaa",
+            "surface-container-low": "#fff0f2",
+            "outline": "#897175",
+            "secondary": "#9d3c5b",
+            "primary-fixed": "#ffd9e0",
+            "text-primary": "#1F0C11",
+            "accent-tint": "#FEE6ED",
+            "primary-container": "#fb7299",
+            "inverse-on-surface": "#ffecef",
+            "support": "#B6E36A",
+            "on-tertiary-fixed-variant": "#00531a",
+            "surface-tint": "#a83159"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "0.75rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1rem",
+            "space-sm": "0.5rem",
+            "space-xl": "1.5rem",
+            "margin": "1.25rem",
+            "gutter": "1rem",
+            "space-2xl": "2rem"
+          },
+          "fontFamily": {
+            "display": ["\"Baloo 2\""],
+            "title": ["\"M PLUS Rounded 1c\""],
+            "label": ["\"M PLUS Rounded 1c\""],
+            "caption": ["\"M PLUS Rounded 1c\""],
+            "body": ["\"M PLUS Rounded 1c\""],
+            "reader-body": ["\"M PLUS Rounded 1c\""]
+          },
+          "fontSize": {
+            "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "reader-body": ["18px", { "lineHeight": "28.8px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .equalizer-bar {
+      animation: bounceEqualizer 1.2s ease-in-out infinite alternate;
+    }
+    @keyframes bounceEqualizer {
+      0% { height: 4px; }
+      50% { height: 14px; }
+      100% { height: 8px; }
+    }
+    .equalizer-bar:nth-child(2) {
+      animation-delay: -0.4s;
+    }
+    .equalizer-bar:nth-child(3) {
+      animation-delay: -0.8s;
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary antialiased flex justify-center items-center min-h-screen p-0 m-0">
+<!-- Mobile Viewport Frame (393px x 852px) -->
+<div class="relative w-[393px] h-[852px] overflow-hidden bg-background shadow-2xl flex flex-col justify-end select-none">
+<!-- BACKGROUND SCREEN: Dimmed Audiobook Player View -->
+<div class="absolute inset-0 z-0 flex flex-col justify-start">
+<!-- Dimmed Player Header / Artwork Background -->
+<div class="relative w-full h-[380px] overflow-hidden bg-black">
+<img alt="Harbour Lights book cover" class="w-full h-full object-cover scale-105 filter blur-[2px] opacity-75" src="https://lh3.googleusercontent.com/aida/ALJJyrChcyKu7PrT6PyPQhng-O8dNhFtunXDXNzLiwEow6_7KKePUtcf7zQ6O3V3MqUdGwL4eqOk_j_rxb7AJpjS6Hn9Tb3mPtSFOAxcD_T-2lv6nwURev9eggW5Kuizpx_Ev_Uj-VGYHIi9bI1_HvShs9mqAg-Olhoaupkwm_4xJgkJvvD8TMCOOSfFt_NWnLoaj3nDF8WniWovg_umgqfhz6kAdJVGXLwPl9N47XA_azWVbEanwPG2vDLCR0Y"/>
+<div class="absolute inset-0 bg-gradient-to-b from-[#1F0C11]/70 via-[#1F0C11]/50 to-[#1F0C11]/90 backdrop-blur-sm"></div>
+</div>
+<!-- Player metadata in dimmed area -->
+<div class="absolute top-[68px] left-0 w-full px-6 flex items-center justify-between z-10 text-white/90">
+<button aria-label="Minimize" class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[22px]">keyboard_arrow_down</span>
+</button>
+<span class="font-title text-[15px] font-bold tracking-wide text-white/90">Now Playing</span>
+<button aria-label="Bookmark" class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[20px]">bookmark_border</span>
+</button>
+</div>
+<!-- Dimmed Mini Info in Backdrop -->
+<div class="absolute top-[130px] left-0 w-full px-8 flex items-center gap-4 z-10 text-white">
+<div class="w-16 h-22 rounded-md overflow-hidden shadow-lg border border-white/20 flex-shrink-0">
+<img alt="Cover Thumbnail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrChcyKu7PrT6PyPQhng-O8dNhFtunXDXNzLiwEow6_7KKePUtcf7zQ6O3V3MqUdGwL4eqOk_j_rxb7AJpjS6Hn9Tb3mPtSFOAxcD_T-2lv6nwURev9eggW5Kuizpx_Ev_Uj-VGYHIi9bI1_HvShs9mqAg-Olhoaupkwm_4xJgkJvvD8TMCOOSfFt_NWnLoaj3nDF8WniWovg_umgqfhz6kAdJVGXLwPl9N47XA_azWVbEanwPG2vDLCR0Y"/>
+</div>
+<div class="flex-1 min-w-0">
+<span class="inline-block px-2 py-0.5 rounded-full bg-[#B6E36A] text-[#1F0C11] text-[10px] font-bold uppercase tracking-wider mb-1">Australian Fiction</span>
+<h2 class="font-title text-[18px] font-bold text-white leading-tight truncate">Harbour Lights</h2>
+<p class="font-body text-[13px] text-white/80 truncate">Jonah Reid</p>
+<p class="font-caption text-[11px] text-white/60 truncate flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[13px]">graphic_eq</span> Narrated by Priya Nair
+          </p>
+</div>
+</div>
+</div>
+<!-- Top Status Bar (iOS style, 59px safe area clearance) -->
+<header class="absolute top-0 left-0 w-full h-[50px] px-7 flex justify-between items-center z-30 text-white">
+<span class="text-[15px] font-semibold tracking-tight">9:41</span>
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-[16px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[16px]">wifi</span>
+<span class="material-symbols-outlined text-[19px]">battery_full</span>
+</div>
+</header>
+<!-- 40% Dark Scrim Overlay for Focused Sheet Experience -->
+<div class="absolute inset-0 bg-[#1F0C11]/50 backdrop-blur-[3px] z-10 transition-opacity"></div>
+<!-- FOCAL ELEMENT: Crisp White Bottom Sheet (rounded top corners 28px, ~70% screen height) -->
+<main class="relative z-20 w-full bg-surface rounded-t-[28px] shadow-[0_-8px_32px_rgba(31,12,17,0.18)] flex flex-col max-h-[74%] h-[630px] pb-6 border-t border-white/60">
+<!-- Top Grab Handle Pill -->
+<div class="w-full pt-3 pb-2 flex justify-center items-center flex-shrink-0 cursor-grab">
+<div class="w-9 h-1 rounded-full bg-border-hairline"></div>
+</div>
+<!-- Sheet Header & Segmented Control -->
+<div class="px-5 pt-1 pb-3 flex items-center justify-between border-b border-border-hairline/60 flex-shrink-0">
+<!-- Segmented Control Pill Container -->
+<nav aria-label="Sheet Navigation" class="flex-1 max-w-[270px] bg-surface-alt p-1 rounded-full flex items-center">
+<button class="flex-1 py-1.5 px-3 rounded-full bg-[#AB4766] text-white font-label text-[13px] font-bold shadow-sm transition-all text-center">
+            Chapters
+          </button>
+<button class="flex-1 py-1.5 px-3 rounded-full text-text-secondary font-label text-[13px] font-medium hover:text-text-primary transition-colors text-center">
+            Sleep timer
+          </button>
+</nav>
+<!-- Close / Dismissal Button -->
+<button aria-label="Close sheet" class="w-8 h-8 ml-3 rounded-full bg-surface-alt hover:bg-surface-container-high transition-colors flex items-center justify-center text-text-secondary active:scale-95 duration-150">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Scrollable Chapters Area -->
+<section aria-label="Chapter List" class="flex-1 overflow-y-auto px-5 py-3 space-y-1.5">
+<div class="flex items-center justify-between px-1 pb-1 text-[11px] font-semibold text-text-tertiary uppercase tracking-wider">
+<span>Part Two: The Crossing</span>
+<span>1h 56m remaining</span>
+</div>
+<!-- Chapter Row 10 -->
+<div class="group flex items-center justify-between p-2.5 rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-3 min-w-0">
+<span class="font-body text-[13px] text-text-tertiary w-5 text-right font-medium">10</span>
+<div class="truncate">
+<h3 class="font-title text-[14px] text-text-primary group-hover:text-primary transition-colors truncate">The Ferry Wharf</h3>
+<p class="font-caption text-[11px] text-text-tertiary">Starts at 0:00</p>
+</div>
+</div>
+<span class="font-label text-[12px] text-text-tertiary font-medium pl-2">38:12</span>
+</div>
+<!-- Chapter Row 11 -->
+<div class="group flex items-center justify-between p-2.5 rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-3 min-w-0">
+<span class="font-body text-[13px] text-text-tertiary w-5 text-right font-medium">11</span>
+<div class="truncate">
+<h3 class="font-title text-[14px] text-text-primary group-hover:text-primary transition-colors truncate">Rain on Circular Quay</h3>
+<p class="font-caption text-[11px] text-text-tertiary">Starts at 38:12</p>
+</div>
+</div>
+<span class="font-label text-[12px] text-text-tertiary font-medium pl-2">41:05</span>
+</div>
+<!-- Chapter Row 12 (CURRENTLY PLAYING HIGHLIGHT) -->
+<div class="relative bg-accent-tint rounded-xl p-3 shadow-sm border border-[#FB7299]/30 cursor-pointer">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<!-- Animated Equalizer Bars Icon -->
+<div class="w-6 h-6 rounded-full bg-[#AB4766]/15 flex items-center justify-center gap-[2.5px] px-1 flex-shrink-0">
+<span class="equalizer-bar w-[2.5px] bg-[#AB4766] rounded-full inline-block h-3"></span>
+<span class="equalizer-bar w-[2.5px] bg-[#AB4766] rounded-full inline-block h-2"></span>
+<span class="equalizer-bar w-[2.5px] bg-[#AB4766] rounded-full inline-block h-3.5"></span>
+</div>
+<div class="truncate">
+<span class="font-title text-[14px] font-bold text-[#AB4766] block truncate">12 · Low Tide</span>
+<p class="font-caption text-[11px] text-text-secondary">Now Playing · 17:48 played</p>
+</div>
+</div>
+<div class="text-right flex-shrink-0 pl-2">
+<span class="font-label text-[12px] font-bold text-[#AB4766] block">41:30</span>
+<span class="font-caption text-[10px] text-text-secondary block">-23:42 left</span>
+</div>
+</div>
+<!-- Thin Progress Bar at 43% -->
+<div class="w-full bg-border-hairline h-1 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-300" style="width: 43%;"></div>
+</div>
+</div>
+<!-- Chapter Row 13 -->
+<div class="group flex items-center justify-between p-2.5 rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-3 min-w-0">
+<span class="font-body text-[13px] text-text-tertiary w-5 text-right font-medium">13</span>
+<div class="truncate">
+<h3 class="font-title text-[14px] text-text-primary group-hover:text-primary transition-colors truncate">The Night Market</h3>
+<p class="font-caption text-[11px] text-text-tertiary">Starts at 2:00:47</p>
+</div>
+</div>
+<span class="font-label text-[12px] text-text-tertiary font-medium pl-2">36:48</span>
+</div>
+<!-- Chapter Row 14 -->
+<div class="group flex items-center justify-between p-2.5 rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-3 min-w-0">
+<span class="font-body text-[13px] text-text-tertiary w-5 text-right font-medium">14</span>
+<div class="truncate">
+<h3 class="font-title text-[14px] text-text-primary group-hover:text-primary transition-colors truncate">Lighthouse Keeper</h3>
+<p class="font-caption text-[11px] text-text-tertiary">Starts at 2:37:35</p>
+</div>
+</div>
+<span class="font-label text-[12px] text-text-tertiary font-medium pl-2">44:10</span>
+</div>
+</section>
+<!-- Hairline Structural Divider -->
+<div class="w-full h-[1px] bg-border-hairline my-1"></div>
+<!-- Sleep Timer Section -->
+<section aria-label="Sleep Timer Options" class="px-5 pt-2 pb-2">
+<div class="flex items-center justify-between mb-2.5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[17px] text-[#AB4766]">bedtime</span>
+<h4 class="font-title text-[14px] font-bold text-text-primary">Sleep timer</h4>
+</div>
+<span class="font-caption text-[12px] text-text-tertiary">Stops playback when timer ends</span>
+</div>
+<!-- Timer Chips Row (Pill shapes, 13px font) -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1.5 pt-0.5 no-scrollbar scroll-smooth">
+<!-- 15 min -->
+<button class="flex-shrink-0 px-3.5 py-1.5 rounded-full bg-accent-tint text-[#AB4766] font-label text-[13px] font-semibold hover:bg-[#fad3df] active:scale-95 transition-all">
+            15 min
+          </button>
+<!-- 30 min -->
+<button class="flex-shrink-0 px-3.5 py-1.5 rounded-full bg-accent-tint text-[#AB4766] font-label text-[13px] font-semibold hover:bg-[#fad3df] active:scale-95 transition-all">
+            30 min
+          </button>
+<!-- 45 min -->
+<button class="flex-shrink-0 px-3.5 py-1.5 rounded-full bg-accent-tint text-[#AB4766] font-label text-[13px] font-semibold hover:bg-[#fad3df] active:scale-95 transition-all">
+            45 min
+          </button>
+<!-- End of chapter (SELECTED) -->
+<button class="flex-shrink-0 px-3.5 py-1.5 rounded-full bg-[#AB4766] text-white font-label text-[13px] font-semibold shadow-sm flex items-center gap-1.5 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">check</span>
+<span>End of chapter</span>
+</button>
+<!-- Custom... -->
+<button class="flex-shrink-0 px-3.5 py-1.5 rounded-full bg-surface-alt text-text-secondary font-label text-[13px] font-medium hover:bg-surface-container-high active:scale-95 transition-all">
+            Custom...
+          </button>
+</div>
+</section>
+<!-- Home Indicator Clearance (iOS bottom safe bar) -->
+<div class="w-full flex justify-center items-center pt-2">
+<div class="w-32 h-1 bg-[#1F0C11]/20 rounded-full"></div>
+</div>
+</main>
+</div>
+</body></html>
